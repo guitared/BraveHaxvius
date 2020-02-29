@@ -13,16 +13,16 @@ namespace BraveHaxvius
 {
     public class BraveExvius
     {
-        public String AppVersion { get; set; } = "1028";
+        public String AppVersion { get; set; } = "1092";
         public String RscVersion { get; set; } = "0";
-        public String MstVersion { get; set; } = "1004";
+        public String MstVersion { get; set; } = "2122";
         public String Device { get; set; } = "iPhone9,3";
         //public String Device { get; set; } = "XT890";
         //public String Device { get; set; } = "SM-E7000";
         public String OperatingSystem { get; set; } = "ios10.2.1";
         //public String OperatingSystem { get; set; } = "android4.4.2";
         public String Locale { get; set; } = "US";
-        public String BuildVersion { get { return Locale == "JP" ? "ver.2.9.3" : "ver.2.3.1"; } }
+        public String BuildVersion { get { return Locale == "JP" ? "ver.2.9.3" : "ver.4.0.5"; } }
         public String UserName { get; set; }
         public String UserId { get; set; }
         public String Password { get; set; }
@@ -106,6 +106,7 @@ namespace BraveHaxvius
         public List<String> GachaId { get; set; } = new List<String>();
         public List<String> GachaDetailId { get; set; } = new List<String>();
         public JObject GetUserInfo;
+        public JObject GetUserInfo2;
         public void Login()
         {
             if (Locale != "JP" && FacebookUserId.Contains("@"))
@@ -198,7 +199,7 @@ namespace BraveHaxvius
         }
         public void UpdateGachaList()
         {
-            var gachaList = GetUserInfo[GameObject.GachaMst];
+            var gachaList = GetUserInfo2[GameObject.GachaMst];
             foreach (var gacha in gachaList)
                 GachaId.Add(gacha[Variable.GachaId] + " : " + gacha[Variable.Description] + " , " + gacha[Variable.InternalDescription]);
         }
@@ -615,7 +616,7 @@ namespace BraveHaxvius
         public void UpdateNews()
         {
             News.Clear();
-            var newsList = GetUserInfo[GameObject.NoticeMstNew].Select(n => new News
+            var newsList = GetUserInfo2[GameObject.NoticeMstNew].Select(n => new News
             {
                 Id = n[Variable.NoticeId].ToString(),
                 Type = n[Variable.NoticeType].ToString(),
@@ -1389,6 +1390,7 @@ namespace BraveHaxvius
         public JObject UpdateGetUserInfo()
         {
             GetUserInfo = Network.SendPacket(Request.GetUserInfo);
+            GetUserInfo2 = Network.SendPacket(Request.GetUserInfo2);
             return GetUserInfo;
         }
         public void UpdateUserName(String name, String msg)

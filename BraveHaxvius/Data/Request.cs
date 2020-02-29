@@ -29,6 +29,7 @@ namespace BraveHaxvius.Data
         public static readonly Request DmgRankEnd = new Request { Name = "DmgRankEnd", Url = "zd5KJ3jn", EncodeKey = "7pGj8hSW", RequestID = "s98cw1WA"};
         public static readonly Request GameSetting = new Request { Name = "GameSetting", Url = "OTX6Fmvu", EncodeKey = "4foXVwWd", RequestID = "OTX6Fmvu"};
         public static readonly Request GetUserInfo = new Request { Name = "GetUserInfo", Url = "u7sHDCg4", EncodeKey = "rcsq2eG7", RequestID = "X07iYtp5"};
+        public static readonly Request GetUserInfo2 = new Request { Name = "GetUserInfo2", Url = "7KZ4Wvuw", EncodeKey = "7VNRi6Dk", RequestID = "2eK5Vkr8"};
         public static readonly Request NoticeUpdate = new Request { Name = "NoticeUpdate", Url = "TqtzK84R", EncodeKey = "9t68YyjT", RequestID = "CQ4jTm2F"};
         public static readonly Request sgExpdAccelerate = new Request { Name = "sgExpdAccelerate", Url = "Ik142Ff6", EncodeKey = "d3D4l8b4", RequestID = "Ik142Ff6"};
         public static readonly Request TownOut = new Request { Name = "TownOut", Url = "0EF3JPjL", EncodeKey = "Kc2PXd9D", RequestID = "sJcMPy04"};
@@ -167,6 +168,7 @@ namespace BraveHaxvius.Data
            DmgRankEnd,
            GameSetting,
            GetUserInfo,
+           GetUserInfo2,
            NoticeUpdate,
            sgExpdAccelerate,
            TownOut,

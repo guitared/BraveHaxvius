@@ -20,6 +20,7 @@ namespace PacketDecoder
     public partial class MainWindow
     {
         ObservableCollection<Packet> people = new ObservableCollection<Packet>();
+        private bool UseNewCryto = true;
         public MainWindow()
         {
             InitializeComponent();
@@ -41,6 +42,15 @@ namespace PacketDecoder
             FiddlerApplication.BeforeResponse += FiddlerApplication_BeforeResponse;
             FiddlerApplication.AfterSessionComplete += FiddlerApplication_AfterSessionComplete;
             FiddlerApplication.Startup(8888, true, true, true);
+        }
+        private void HandleChecked(object sender, RoutedEventArgs e)
+        {
+            UseNewCryto = true;
+        }
+
+        private void HandleUnchecked(object sender, RoutedEventArgs e)
+        {
+            UseNewCryto = false;
         }
 
         Boolean installCertificateMessage = false;
@@ -119,7 +129,7 @@ namespace PacketDecoder
                     if (encryptedObject != null)
                     {
                         var encryptedData = encryptedObject[Variable.Data].Value;
-                        var decryptedJson = Crypto.Decrypt(encryptedData, request.EncodeKey);
+                        var decryptedJson = !UseNewCryto ? Crypto.Decrypt(encryptedData, request.EncodeKey) : Crypto.NewCryto(encryptedData, request.EncodeKey) ;
                         if (decryptedJson.Contains(""))
                         {
                         }
@@ -157,7 +167,7 @@ namespace PacketDecoder
                     if (encryptedObject != null)
                     {
                         var encryptedData = encryptedObject[Variable.Data].Value;
-                        var decryptedJson = Crypto.Decrypt(encryptedData, request.EncodeKey);
+                        var decryptedJson = !UseNewCryto ? Crypto.Decrypt(encryptedData, request.EncodeKey) : Crypto.NewCryto(encryptedData, request.EncodeKey);
                     }
                 }
             }
@@ -193,7 +203,7 @@ namespace PacketDecoder
                 dynamic json = JsonConvert.DeserializeObject(reqBody);
                 var encryptedObject = json[Variable.Encrypted];
                 var encryptedData = encryptedObject[Variable.Data].Value;
-                var decryptedJson = Crypto.Decrypt(encryptedData, request.EncodeKey);
+                var decryptedJson = !UseNewCryto ? Crypto.Decrypt(encryptedData, request.EncodeKey) : Crypto.NewCryto(encryptedData, request.EncodeKey);
                 var sendpacket = new Packet
                 {
                     Time = time,
@@ -214,8 +224,7 @@ namespace PacketDecoder
                     if (encryptedObject != null)
                     {
                         var encryptedData = encryptedObject[Variable.Data].Value;
-                        var decryptedJson = Crypto.Decrypt(encryptedData, request.EncodeKey);
-                        var recievepacket = new Packet
+                        var decryptedJson = !UseNewCryto ? Crypto.Decrypt(encryptedData, request.EncodeKey) : Crypto.NewCryto(encryptedData, request.EncodeKey); var recievepacket = new Packet
                         {
                             Time = time,
                             Num = packetCount++,
