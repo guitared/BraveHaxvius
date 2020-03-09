@@ -11,11 +11,18 @@ namespace BraveHaxvius
         public static StringBuilder LogString = new StringBuilder();
         public delegate void LogHookDelegate(String x);
         public static LogHookDelegate LogHook;
+        public static LogHookDelegate LogHookInline;
         public static void Out(string str)
         {
             Console.WriteLine(str);
             LogString.Append(str).Append(Environment.NewLine);
             LogHook?.Invoke(str);
+        }
+        public static void Inline(string str)
+        {
+            Console.Write(str);
+            LogString.Append(str);
+            LogHookInline?.Invode(str);
         }
     }
 }
