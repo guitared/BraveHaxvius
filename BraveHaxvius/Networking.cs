@@ -72,7 +72,7 @@ namespace BraveHaxvius
         }
         public JObject SendPacket(Request request, List<JProperty> inputs)
         {
-            Logger.Out("Sending : " + request.Name + "...");
+            Logger.Inline("Sending : " + request.Name + "...");
             var decryptedData = DataObject(inputs);
             var decryptedDataString = JsonConvert.SerializeObject(decryptedData, Formatting.None);
             var encryptedData = Crypto.Encrypt(decryptedDataString, request.EncodeKey);
@@ -111,6 +111,7 @@ namespace BraveHaxvius
                 var msg = Text.Texts.First(t => t.Key == errorMsg.ToString()).Value;
                 if (msg == "Please log in again.")
                 {
+                    Logger.Out("\tFailed Login");
                     Thread.Sleep(10000);
                     client.UserId = "";
                     client.UserName = "";
@@ -143,7 +144,7 @@ namespace BraveHaxvius
             var signalResponse = decryptedResponseData[GameObject.SignalKey];
             if (signalResponse != null)
                 client.LastSignalKey = signalResponse.First()[Variable.Data].ToString();
-            Logger.Out("\tRequest done");
+            Logger.Out("\tDone");
             return decryptedResponseData;
         }
         public String DecodePacket(JObject obj)
