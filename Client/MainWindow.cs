@@ -33,11 +33,19 @@ namespace Client
             if (!String.IsNullOrWhiteSpace(ProxyIP.Text))
                 client.ProxyPort = int.Parse(ProxyPort.Text);
             Logger.LogHook = Hook;
+            Logger.LogHookInline = HookInline;
         }
         public void Hook(String s)
         {
             consoleLog.Focus();
             consoleLog.AppendText(s+ "\r\n");
+            consoleLog.ScrollToCaret();
+        }
+        public void HookInline(String s)
+        {
+            consoleLog.Focus();
+            consoleLog.AppendText(s);
+            consoleLog.ScrollToCaret();
         }
         private void InitStaticItems()
         {
