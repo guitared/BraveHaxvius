@@ -59,14 +59,14 @@ namespace Client
             injectDataGrid.DataSource = injectDataTable;
             
             Unit.Units.FindAll(u => u.Description != null && u.IsSummonable == "1" && u.UnitId == u.BaseUnitId);
-            List<Mission> list = new List<Mission>();
-            Mission.Missions.FindAll(i => i.Description != null).ForEach(i => list.Add(i));
+            List<Mission> missionList = new List<Mission>();
+            Mission.Missions.FindAll(i => i.Description != null).ForEach(i => {i.Description = string.Format("[{0}] {1}", i.Energy, i.Name); missionList.Add(i)});
 
             unitSelect.DataSource = Unit.Units.FindAll(u => u.Description != null && u.IsSummonable == "1" && u.UnitId == u.BaseUnitId);
             unitSelect.DisplayMember = "Name";
             
-            missionSelect.DataSource = Mission.Missions.FindAll(i => i.Description != null);
-            missionSelect.DisplayMember = "Name";
+            missionSelect.DataSource = missionList;
+            missionSelect.DisplayMember = "Description";
         }
         private void InitGacha(BraveExvius b)
         {
