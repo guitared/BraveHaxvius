@@ -100,8 +100,12 @@ namespace PacketDecoder
         {
             UninstallCertificate();
         }
+        private void Button2_Click(object sender, RoutedEventArgs e)
+        {
+            people.Clear();
+        }
         int packetCount = 0;
-        
+
         private void FiddlerApplication_BeforeRequest(Session oSession)
         {
             if (oSession.RequestMethod == "CONNECT")
@@ -120,11 +124,13 @@ namespace PacketDecoder
                 return;
             headers = firstLine + "\r\n" + headers.Substring(at + 1);
             var url = oSession.fullUrl.Substring(oSession.fullUrl.IndexOf("actionSymbol") + 13).Replace(".php", "");
-            var request = Request.Requests.First(r => r.Url == url);
+
+            var request = new Request { Name = "GachaBoxNextRequest", Url = "tULiKh5j", EncodeKey = "U2Lm8vcS", RequestID = "xa9uR3pI" };//Request.Requests.First(r => r.Url == url);
             {
                 dynamic json = JsonConvert.DeserializeObject(reqBody);
                 if (json != null)
                 {
+                    request = Request.Requests.First(r => r.RequestID == json[GameObject.Header][Variable.RequestID].ToString());
                     var encryptedObject = json[Variable.Encrypted];
                     if (encryptedObject != null)
                     {
@@ -163,6 +169,8 @@ namespace PacketDecoder
                 dynamic json = JsonConvert.DeserializeObject(respBody);
                 if (json != null)
                 {
+                    try { request = Request.Requests.First(r => r.RequestID == json[GameObject.Header][Variable.RequestID].ToString()); }
+                    catch { }
                     var encryptedObject = json[Variable.Encrypted];
                     if (encryptedObject != null)
                     {
@@ -201,6 +209,7 @@ namespace PacketDecoder
 
             {
                 dynamic json = JsonConvert.DeserializeObject(reqBody);
+                request = Request.Requests.First(r => r.RequestID == json[GameObject.Header][Variable.RequestID].ToString());
                 var encryptedObject = json[Variable.Encrypted];
                 var encryptedData = encryptedObject[Variable.Data].Value;
                 var decryptedJson = !UseNewCryto ? Crypto.Decrypt(encryptedData, request.EncodeKey) : Crypto.NewCryto(encryptedData, request.EncodeKey);

@@ -5,17 +5,7 @@ namespace BraveHaxvius.Data
 {
     public class Variable
     {
-        public static readonly String IWEquipId = "XjLm3Y0r";
-        public static readonly String ArchiveUpdate = "dP2f71TL";
-        public static readonly String NextHomeUpdateTime = "0Zpuzj7E";
-        public static readonly String BundleCost = "AOHRcCC2";
-        public static readonly String CurrentAbilities = "nM63Zvtp";
-        public static readonly String InStoreAbilities = "2p9qywBL";
-        public static readonly String Status = "cEVau7d8";
         public static readonly String Encrypted = "t7n6cVWf";
-        public static readonly String IWOrb = "9vBE36PW";
-        public static readonly String IWOrbTimer = "p81guTGJ";
-        public static readonly String IWOrbMax = "n3G5ItVX";
         public static readonly String UserId = "9Tbns0eI";
         public static readonly String UserName = "9qh17ZUf";
         public static readonly String Password = "JC61TPqS";
@@ -107,7 +97,7 @@ namespace BraveHaxvius.Data
         public static readonly String QuestStatus = "4kcAD9fW";
         public static readonly String AcceptedDate = "VjJQ51uG";
         public static readonly String CompletedDate = "m8ivD4NX";
-        public static readonly String BeastId = "Iwfx42Wo";
+        public static readonly String EsperId = "Iwfx42Wo";
         public static readonly String ColosseumId = "i5pd8xr3";
         public static readonly String Description = "G4L0YIB2";
         public static readonly String GachaId = "X1IuZnj2";
@@ -174,7 +164,6 @@ namespace BraveHaxvius.Data
         public static readonly String FriendRank = "QSf4NDq3";
         public static readonly String FriendLevel = "wjX34YxG";
         public static readonly String FriendIdFrom = "bUfq8BJ3";
-        public static readonly String EsperParty = "XZ4Kh7Ic";
         public static readonly String MonsterHp = "fh31sk7B";
         public static readonly String MonsterMp = "PC97pWQj";
         public static readonly String MonsterAtk = "9NBV1XCS";
@@ -333,6 +322,7 @@ namespace BraveHaxvius.Data
         public static readonly String BundleImage2 = "MfynwFte";
         public static readonly String BundleImage1Copy = "hJs2B3X5";
         public static readonly String BundleCostType = "pRYHbNN5";
+        public static readonly String BundleCost = "AOHRcCC2";
         public static readonly String BundleItemId = "4FF0gz8P";
         public static readonly String BundleItemType = "YWF08vZS";
         public static readonly String MailId = "ynP26rjD";
@@ -360,7 +350,7 @@ namespace BraveHaxvius.Data
         public static readonly String ExpeditionRewardId = "k60s8T42";
         public static readonly String ExpeditionRelic = "p1H8307H";
         public static readonly String ExpeditionRewardItem = "23tA3948";
-        public static readonly String ExpeditionRewardClaimed = "3JND4wjr";
+        public static readonly String ExpeditionRewardClaimed = "O7s2496M";
         public static readonly String ExpeditionUnits = "7mA422N6";
         public static readonly String ExpeditionBonus = "sO308L0M";
         public static readonly String PartySelect = "CN92arJK";
@@ -368,6 +358,7 @@ namespace BraveHaxvius.Data
         public static readonly String CompanionParty = "MBIYc89Q";
         public static readonly String ColosseumParty = "Isc1ga3G";
         public static readonly String ArenaParty = "igrz05CY";
+        public static readonly String EsperParty = "XZ4Kh7Ic";
         public static readonly String EquipmentRarity = "52KBR9qV";
         public static readonly String EquipmentSlotId = "znGsI4f8";
         public static readonly String EquipmentTypeId = "8DZGF4Nn";
@@ -384,31 +375,11 @@ namespace BraveHaxvius.Data
         public static readonly String SublimationItems = "HS7V6Ww1";
         public static readonly String SublimationUnitId = "25oxcKwN";
         public static readonly String ClassUpItems = "KCk8u0am";
-        public static readonly String P_GOOGLE_TOKEN = "P_GOOGLE_TOKEN";
-        public static readonly String P_GOOGLE_ID = "P_GOOGLE_ID";
         public static readonly String LBExperience = "A90DrNfp";
-        public static readonly String AbilityId = "Ga5V42LZ";
-        public static readonly String Ha9G5sCS = "Ha9G5sCS";
-        public static readonly String ImportantId = "2dfixko3";
-        public static readonly String RelicsCollected = "92l3W8pW";
-        public static readonly String Corridas = "mqbn4Gdm";
-        public static readonly String MaxPorDias = "sx4kyW0i";
-        public static readonly String ProcetajeDeExito = "hKcId7sNVR";
-        public static readonly String DateFinish = "2x2W5439";
 
 		public static readonly Dictionary<String, String> Variables = new Dictionary<String, String>
 		{
-            {IWEquipId, "IWEquipId"},
-            {ArchiveUpdate, "ArchiveUpdate"},
-            {NextHomeUpdateTime, "NextHomeUpdateTime"},
-            {BundleCost, "BundleCost"},
-            {CurrentAbilities, "CurrentAbilities"},
-            {InStoreAbilities, "InStoreAbilities"},
-            {Status, "Status"},
             {Encrypted, "Encrypted"},
-            {IWOrb, "IWOrb"},
-            {IWOrbTimer, "IWOrbTimer"},
-            {IWOrbMax, "IWOrbMax"},
             {UserId, "UserId"},
             {UserName, "UserName"},
             {Password, "Password"},
@@ -500,7 +471,7 @@ namespace BraveHaxvius.Data
             {QuestStatus, "QuestStatus"},
             {AcceptedDate, "AcceptedDate"},
             {CompletedDate, "CompletedDate"},
-            {BeastId, "BeastId"},
+            {EsperId, "EsperId"},
             {ColosseumId, "ColosseumId"},
             {Description, "Description"},
             {GachaId, "GachaId"},
@@ -567,7 +538,6 @@ namespace BraveHaxvius.Data
             {FriendRank, "FriendRank"},
             {FriendLevel, "FriendLevel"},
             {FriendIdFrom, "FriendIdFrom"},
-            {EsperParty, "EsperParty"},
             {MonsterHp, "MonsterHp"},
             {MonsterMp, "MonsterMp"},
             {MonsterAtk, "MonsterAtk"},
@@ -726,6 +696,7 @@ namespace BraveHaxvius.Data
             {BundleImage2, "BundleImage2"},
             {BundleImage1Copy, "BundleImage1Copy"},
             {BundleCostType, "BundleCostType"},
+            {BundleCost, "BundleCost"},
             {BundleItemId, "BundleItemId"},
             {BundleItemType, "BundleItemType"},
             {MailId, "MailId"},
@@ -761,6 +732,7 @@ namespace BraveHaxvius.Data
             {CompanionParty, "CompanionParty"},
             {ColosseumParty, "ColosseumParty"},
             {ArenaParty, "ArenaParty"},
+            {EsperParty, "EsperParty"},
             {EquipmentRarity, "EquipmentRarity"},
             {EquipmentSlotId, "EquipmentSlotId"},
             {EquipmentTypeId, "EquipmentTypeId"},
@@ -777,17 +749,7 @@ namespace BraveHaxvius.Data
             {SublimationItems, "SublimationItems"},
             {SublimationUnitId, "SublimationUnitId"},
             {ClassUpItems, "ClassUpItems"},
-            {P_GOOGLE_TOKEN, "P_GOOGLE_TOKEN"},
-            {P_GOOGLE_ID, "P_GOOGLE_ID"},
             {LBExperience, "LBExperience"},
-            {AbilityId, "AbilityId"},
-            {Ha9G5sCS, "Ha9G5sCS"},
-            {ImportantId, "ImportantId"},
-            {RelicsCollected, "RelicsCollected"},
-            {Corridas, "Corridas"},
-            {MaxPorDias, "MaxPorDias"},
-            {ProcetajeDeExito, "ProcetajeDeExito"},
-            {DateFinish, "DateFinish"},
 		};
     }
 }

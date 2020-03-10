@@ -163,7 +163,7 @@ namespace BraveHaxvius
             webRequest.Timeout = 150000;
             webRequest.ContentType = "application/x-www-form-urlencoded";
             webRequest.Accept = "*/*";
-            webRequest.UserAgent = "FF%20EXVIUS/" + client.BuildVersion.Replace("ver.", "") + " CFNetwork/808.3 Darwin/16.3.0";
+            webRequest.UserAgent = "FF%20EXVIUS/" + client.BuildVersion.Replace("ver.", "") + " CFNetwork/1121.2.2 Darwin/19.3.0";
             webRequest.AutomaticDecompression = DecompressionMethods.GZip;
             webRequest.Headers[HttpRequestHeader.AcceptEncoding] = "gzip";
             webRequest.Headers[HttpRequestHeader.AcceptLanguage] = "en-us";

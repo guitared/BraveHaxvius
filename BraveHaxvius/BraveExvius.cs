@@ -126,6 +126,7 @@ namespace BraveHaxvius
                 FacebookUserId = fb.Id;
                 FacebookToken = fb.AccessToken;
             }
+
             //DeviceId = Guid.NewGuid().ToString().ToUpper();
             //b.ContactId = Crypto.Encrypt(b.DeviceId, "Zy3MDURw");
             //AdvertisingId = Guid.NewGuid().ToString().ToUpper();
