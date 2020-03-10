@@ -47,6 +47,27 @@ namespace Client
             consoleLog.AppendText(s);
             consoleLog.ScrollToCaret();
         }
+        private void UpdateUserInfo(userInfo)
+        {
+            try
+            {
+                var level = userInfo[GameObject.UserTeamInfo][0][Variable.Level].ToString();
+                var experience = userInfo[GameObject.UserTeamInfo][0][Variable.Experience].ToString();
+                var orbs = userInfo[GameObject.UserTeamInfo][0][Variable.ColosseumOrb].ToString();
+                var energy = userInfo[GameObject.UserTeamInfo][0][Variable.Energy].ToString() + '/' + userInfo[GameObject.UserTeamInfo][0][Variable.EnergyMax].ToString();
+                var gil = userInfo[GameObject.UserTeamInfo][0][Variable.Gil].ToString();
+                var lapis = userInfo[GameObject.UserDiamondInfo][0][Variable.Lapis].ToString();
+                var currentParty = int.Parse(userInfo[GameObject.UserActualInfo][0][Variable.CurrentParty].ToString());
+                var party = userInfo[GameObject.UserPartyDeckInfo_5Eb0Rig6][currentParty];
+                var partyUnits = party[Variable.PartyUnits].ToString().Split(new char[1] { ',' });
+                var units = partyUnits.Select(u => Units.FirstOrDefault(unit => unit.UniqueUnitId == u.Split(new char[1] { ':' }).Last())).ToList();
+                var unitTXT = String.Join("\r\n", units.Select(u => u.Name + " " + u.Rarity + "*" + " level " + u.Level + " tmr "+ u.Tmr))
+            }
+            catch (Exception e)
+            {
+            
+            }
+        }
         private void InitStaticItems()
         {
             injectDataTable.Columns.Add("Count");
@@ -159,8 +180,8 @@ namespace Client
                 while (true)
                 {
                     var result = client.DoMission(Mission.PortCityLodin, false, null, null, null, false, false, false, false, false, null, 15000);
-                    var level = result[GameObject.UserTeamInfo].First()[Variable.Level].ToString();
-                    var experience = result[GameObject.UserTeamInfo].First()[Variable.Experience].ToString();
+                    var level = result[GameObject.UserTeamInfo][0][Variable.Level].ToString();
+                    var experience = result[GameObject.UserTeamInfo][0][Variable.Experience].ToString();
                     levelStatus.Text = "Rank " + level + " : experience = " + experience;
                     if (level == "150")
                         break;
@@ -192,7 +213,7 @@ namespace Client
             {
                 GachaSummon.Enabled = false;
                 
-                var GachaId = JPGacha.Text.Split(':').Select(p => p.Trim()).ToList().First();
+                var GachaId = JPGacha.Text.Split(':').Select(p => p.Trim()).ToList()[0];
                 var Gacha = Gachas.First(g => g[Variable.GachaId].ToString() == GachaId);
                 var GachaTicket = Ticket.Tickets.First(x => x.Name == JPGachaTicket.Text).Id;
                 var GachaSubId = Gacha[Variable.Options].ToString().Split(',').Last();
@@ -213,11 +234,11 @@ namespace Client
                 client.OperatingSystem = RBiOS.Checked ? "ios10.2.1" : RBAndroid.Checked ? "android4.4.2" : "amazon";
                 client.Login();
                 var mission = missionSelect.SelectedItem as Mission;
-                client.DoMission(mission, CBFriends.Checked, null, null, null, CBTrophies.Checked, CBChallenge.Checked, CBLoot.Checked, CBUnits.Checked, CBExplore.Checked, LBLevel.Text, 3000);
+                var result = client.DoMission(mission, CBFriends.Checked, null, null, null, CBTrophies.Checked, CBChallenge.Checked, CBLoot.Checked, CBUnits.Checked, CBExplore.Checked, LBLevel.Text, 3000);
                 var count = 1;
                 while (!String.IsNullOrEmpty(RepeatMission.Text.Replace(" ", "")) && count < Int32.Parse(RepeatMission.Text.Replace(" ", "")))
                 {
-                    client.DoMission(mission, CBFriends.Checked, null, null, null, CBTrophies.Checked, CBChallenge.Checked, CBLoot.Checked, CBUnits.Checked, CBExplore.Checked, LBLevel.Text, 3000);
+                    result = client.DoMission(mission, CBFriends.Checked, null, null, null, CBTrophies.Checked, CBChallenge.Checked, CBLoot.Checked, CBUnits.Checked, CBExplore.Checked, LBLevel.Text, 3000);
                     count++;
                     Thread.Sleep(3000);
                 }
@@ -314,9 +335,9 @@ namespace Client
                 {
                     sellButton.Enabled = false;
                     client.Login();
-                    var items = client.GetUserInfo[GameObject.UserItemInfo_4rC0aLkA].First()[Variable.ItemList].ToString().Split(new char[1] { ',' }, StringSplitOptions.RemoveEmptyEntries);
-                    var equips = client.GetUserInfo[GameObject.UserEquipItemInfo_w83oV9uP].First()[Variable.ItemList].ToString().Split(new char[1] { ',' }, StringSplitOptions.RemoveEmptyEntries);
-                    var materias = client.GetUserInfo[GameObject.UserMateriaInfo_aS39Eshy].First()[Variable.ItemList].ToString().Split(new char[1] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+                    var items = client.GetUserInfo[GameObject.UserItemInfo_4rC0aLkA][0][Variable.ItemList].ToString().Split(new char[1] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+                    var equips = client.GetUserInfo[GameObject.UserEquipItemInfo_w83oV9uP][0][Variable.ItemList].ToString().Split(new char[1] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+                    var materias = client.GetUserInfo[GameObject.UserMateriaInfo_aS39Eshy][0][Variable.ItemList].ToString().Split(new char[1] { ',' }, StringSplitOptions.RemoveEmptyEntries);
 
                     List<Sell> sellable = new List<Sell>();
                     foreach (var itemInfo in items)
