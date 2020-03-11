@@ -10,6 +10,7 @@ namespace BraveHaxvius.Data
         public String EncodeKey { get; set; }
         public String RequestID { get; set; }
 
+        public static readonly Request GachaBoxNextRequest = new Request { Name = "GachaBoxNextRequest", Url = "tULiKh5j", EncodeKey = "U2Lm8vcS", RequestID = "xa9uR3pI"};
         public static readonly Request AllianceDeckEdit = new Request { Name = "AllianceDeckEdit", Url = "7gAGFC4I", EncodeKey = "2E3UinsJ", RequestID = "P76LYXow"};
         public static readonly Request SgSlotInfo = new Request { Name = "SgSlotInfo", Url = "action", EncodeKey = "gsRV5GaY", RequestID = "uVswysHK"};
         public static readonly Request SgSlot = new Request { Name = "SgSlot", Url = "action", EncodeKey = "vyLhq43j", RequestID = "DW2yAFjB"};
@@ -191,6 +192,7 @@ namespace BraveHaxvius.Data
 
 		public static readonly List<Request> Requests = new List<Request>
 		{
+           GachaBoxNextRequest,
            AllianceDeckEdit,
            SgSlotInfo,
            SgSlot,

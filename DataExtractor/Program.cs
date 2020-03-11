@@ -244,7 +244,10 @@ namespace BraveHaxvius.Data
             var translations = DecodeFile(msts.First(m => m[Variable.KeyName].ToString() == translation));
             var json = DecodeFile(msts.First(m => m[Variable.KeyName].ToString() == mst));
             DumpTranslation(translations, json, translation, mst, className, members);
+            
         }
+        
+        
         static void DumpTranslation(String translationVersion, String jsonVersion, String translation, String mst, String className, Dictionary<String, String> members = null)
         {
             var translations = DecodeFile(translation, translationVersion);
@@ -347,6 +350,7 @@ namespace BraveHaxvius.Data
             DumpHardcoded("Request", networkJson, new List<String> { "Url", "EncodeKey", "RequestID" });
             DumpHardcoded("GameObject", responseJson);
             DumpHardcoded("Variable", variableJson);
+
             var bot = new BraveExvius
             {
                 MstVersion = "0"

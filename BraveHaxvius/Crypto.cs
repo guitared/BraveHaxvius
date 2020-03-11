@@ -44,7 +44,7 @@ namespace BraveHaxvius
                 using (CryptoStream cryptoStream = new CryptoStream(memoryStream, transform, CryptoStreamMode.Write))
                     cryptoStream.Write(uncryptedBytes, 0, uncryptedBytes.Length);
                 var tmp = Encoding.UTF8.GetString(memoryStream.ToArray());
-                return tmp.Substring(0, 3 + tmp.IndexOf("}]}", 0));
+                return tmp.Substring(0, 1 + tmp.LastIndexOf("}"));
             }
         }
     }
