@@ -13,7 +13,7 @@ namespace BraveHaxvius
 {
     public class BraveExvius
     {
-        public String AppVersion { get; set; } = "1092";
+        public String AppVersion { get; set; } = "1093";
         public String RscVersion { get; set; } = "0";
         public String MstVersion { get; set; } = "2122";
         public String Device { get; set; } = "iPhone9,3";
@@ -22,7 +22,7 @@ namespace BraveHaxvius
         public String OperatingSystem { get; set; } = "ios10.2.1";
         //public String OperatingSystem { get; set; } = "android4.4.2";
         public String Locale { get; set; } = "US";
-        public String BuildVersion { get { return Locale == "JP" ? "ver.2.9.3" : "ver.4.0.5"; } }
+        public String BuildVersion { get { return Locale == "JP" ? "ver.2.9.3" : "ver.4.0.6"; } }
         public String UserName { get; set; }
         public String UserId { get; set; }
         public String Password { get; set; }

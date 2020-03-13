@@ -782,6 +782,12 @@ namespace BraveHaxvius.Data
         public static readonly ClassUp Unit_211000906 = new ClassUp { UnitId = "211000906", Items = "20:300000280:1"};
         public static readonly ClassUp Unit_211001004 = new ClassUp { UnitId = "211001004", Items = "20:290020700:25,20:290030100:13,20:290050300:15,20:290040000:8,20:290050400:8"};
         public static readonly ClassUp Unit_211001005 = new ClassUp { UnitId = "211001005", Items = "20:290060000:20,20:290060300:10,20:290060200:10,20:290060400:5,20:290050500:5"};
+        public static readonly ClassUp Unit_211001205 = new ClassUp { UnitId = "211001205", Items = "20:290060000:20,20:290060100:10,20:290060300:10,20:290060400:5,20:290050500:5"};
+        public static readonly ClassUp Unit_211001206 = new ClassUp { UnitId = "211001206", Items = "20:300002140:1"};
+        public static readonly ClassUp Unit_211001305 = new ClassUp { UnitId = "211001305", Items = "20:290060300:20,20:290060400:10,20:290060200:10,20:290060000:5,20:290050500:5"};
+        public static readonly ClassUp Unit_211001306 = new ClassUp { UnitId = "211001306", Items = "20:300002150:1"};
+        public static readonly ClassUp Unit_211001404 = new ClassUp { UnitId = "211001404", Items = "20:290020100:25,20:290030000:13,20:290050300:15,20:290040200:8,20:290050400:8"};
+        public static readonly ClassUp Unit_211001405 = new ClassUp { UnitId = "211001405", Items = "20:290060400:20,20:290060200:10,20:290060100:10,20:290060000:5,20:290050500:5"};
         public static readonly ClassUp Unit_212000103 = new ClassUp { UnitId = "212000103", Items = "20:290010000:25,20:290050200:15,20:290020100:10,20:290030000:5,20:290050300:5"};
         public static readonly ClassUp Unit_212000104 = new ClassUp { UnitId = "212000104", Items = "20:290020100:20,20:290030000:10,20:290050300:10,20:290040200:5,20:290050400:5"};
         public static readonly ClassUp Unit_212000105 = new ClassUp { UnitId = "212000105", Items = "20:290060300:20,20:290060000:10,20:290060100:10,20:290060200:5,20:290050500:5"};
@@ -2094,6 +2100,12 @@ namespace BraveHaxvius.Data
            Unit_211000906,
            Unit_211001004,
            Unit_211001005,
+           Unit_211001205,
+           Unit_211001206,
+           Unit_211001305,
+           Unit_211001306,
+           Unit_211001404,
+           Unit_211001405,
            Unit_212000103,
            Unit_212000104,
            Unit_212000105,

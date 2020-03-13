@@ -1,3 +1,4 @@
+//MST_MATERIA_NAME_504232708^Knowledge of Aeons^Knowledge of Aeons---VersionControl
 using System;
 using System.Collections.Generic;
 
@@ -129,7 +130,6 @@ namespace BraveHaxvius.Data
         public static readonly Materia Cura = new Materia { Name = "Cura", MateriaId = "504010070", Description = "ケアルラ", CountId = "1150030", EquipmentActiveAbility = "10070", EquipmentPassiveAbility = "", ItemStack = "99", ItemBuyPrice = "5000", ItemSellPrice = "500", ItemIdClone = "700000004", BitNumber = "7"};
         public static readonly Materia DEF_504100130 = new Materia { Name = "DEF +10%", MateriaId = "504100130", Description = "防御+10%", CountId = "2114010", EquipmentActiveAbility = "", EquipmentPassiveAbility = "100130", ItemStack = "99", ItemBuyPrice = "1000", ItemSellPrice = "100", ItemIdClone = "700000077", BitNumber = "157"};
         public static readonly Materia EquipBow = new Materia { Name = "Equip Bow", MateriaId = "504100820", Description = "弓装備", CountId = "2155070", EquipmentActiveAbility = "", EquipmentPassiveAbility = "100820", ItemStack = "99", ItemBuyPrice = "30000", ItemSellPrice = "3000", ItemIdClone = "700000096", BitNumber = "440"};
-        public static readonly Materia ReflectTest = new Materia { Name = "Reflect Test"};
         public static readonly Materia Bravery = new Materia { Name = "Bravery", MateriaId = "504030210", Description = "ブレイブ", CountId = "1350010", EquipmentActiveAbility = "30210", EquipmentPassiveAbility = "", ItemStack = "99", ItemBuyPrice = "8000", ItemSellPrice = "800", ItemIdClone = "700000077", BitNumber = "442"};
         public static readonly Materia ATK_504100090 = new Materia { Name = "ATK +30%", MateriaId = "504100090", Description = "攻撃+30%", CountId = "2113050", EquipmentActiveAbility = "", EquipmentPassiveAbility = "100090", ItemStack = "99", ItemBuyPrice = "15000", ItemSellPrice = "1500", ItemIdClone = "700000077", BitNumber = "443"};
         public static readonly Materia MAG_504100100 = new Materia { Name = "MAG +10%", MateriaId = "504100100", Description = "魔力+10%", CountId = "2115010", EquipmentActiveAbility = "", EquipmentPassiveAbility = "100100", ItemStack = "99", ItemBuyPrice = "1000", ItemSellPrice = "100", ItemIdClone = "700000077", BitNumber = "444"};
@@ -287,184 +287,6 @@ namespace BraveHaxvius.Data
         public static readonly Materia DEF_504100140 = new Materia { Name = "DEF +20%", MateriaId = "504100140", Description = "防御+20%", CountId = "2114030", EquipmentActiveAbility = "", EquipmentPassiveAbility = "100140", ItemStack = "99", ItemBuyPrice = "5000", ItemSellPrice = "500", ItemIdClone = "700000077", BitNumber = "593"};
         public static readonly Materia ManufactedNethicite = new Materia { Name = "Manufacted Nethicite", MateriaId = "504209500", Description = "人造破魔石", CountId = "2295020", EquipmentActiveAbility = "", EquipmentPassiveAbility = "209500", ItemStack = "99", ItemBuyPrice = "50000", ItemSellPrice = "5000", ItemIdClone = "700000015", BitNumber = "594"};
         public static readonly Materia EarthResistance_504209550 = new Materia { Name = "Earth Resistance +15%", MateriaId = "504209550", Description = "土属性耐性+15%", CountId = "2153620", EquipmentActiveAbility = "", EquipmentPassiveAbility = "209550", ItemStack = "99", ItemBuyPrice = "3000", ItemSellPrice = "300", ItemIdClone = "700000012", BitNumber = "595"};
-        public static readonly Materia NA_504900120 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900130 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900140 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900150 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900160 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900170 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900180 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900190 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900200 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900210 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900220 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900230 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900240 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900250 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900260 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900270 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900280 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900290 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900300 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900310 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900320 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900330 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900340 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900350 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900360 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900370 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900380 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900390 = new Materia { Name = "NA"};
-        public static readonly Materia Firaja = new Materia { Name = "Firaja"};
-        public static readonly Materia Blizzaja = new Materia { Name = "Blizzaja"};
-        public static readonly Materia Thundaja = new Materia { Name = "Thundaja"};
-        public static readonly Materia Waterja = new Materia { Name = "Waterja"};
-        public static readonly Materia Aeroja = new Materia { Name = "Aeroja"};
-        public static readonly Materia Stonja = new Materia { Name = "Stonja"};
-        public static readonly Materia MirrorCounter = new Materia { Name = "Mirror Counter"};
-        public static readonly Materia LasswellLvl = new Materia { Name = "Lasswell Lvl 100"};
-        public static readonly Materia NA_504900480 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900490 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900500 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900510 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900520 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900530 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900540 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900550 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900560 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900570 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900580 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900590 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900600 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900610 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900620 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900630 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900640 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900650 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900660 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900670 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900680 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900690 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900700 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900710 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900720 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900730 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900740 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900750 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900760 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900770 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900780 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900790 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900800 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900810 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900820 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900830 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900840 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900850 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900860 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900870 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900880 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900890 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900900 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900910 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900920 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900930 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900940 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900950 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900960 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900970 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900980 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504900990 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901000 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901010 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901020 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901030 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901040 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901050 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901060 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901070 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901080 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901090 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901100 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901110 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901120 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901130 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901140 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901150 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901160 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901170 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901180 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901190 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901200 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901210 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901220 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901230 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901240 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901250 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901260 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901270 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901280 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901290 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901300 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901310 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901320 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901330 = new Materia { Name = "NA"};
-        public static readonly Materia Dark = new Materia { Name = "Dark"};
-        public static readonly Materia Darkra_504901350 = new Materia { Name = "Darkra"};
-        public static readonly Materia Darkga = new Materia { Name = "Darkga"};
-        public static readonly Materia NA_504901370 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901380 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901390 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901400 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901410 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901420 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901430 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901440 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901450 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901460 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901470 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901480 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901490 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901500 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901510 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901520 = new Materia { Name = "NA"};
-        public static readonly Materia Tornado = new Materia { Name = "Tornado"};
-        public static readonly Materia NA_504901540 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901550 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901560 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901570 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901580 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901590 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901600 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901610 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901620 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901630 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901640 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901650 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901660 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901670 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901680 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901690 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901700 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901710 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901720 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901730 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901740 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901750 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901760 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901770 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901780 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901790 = new Materia { Name = "NA"};
-        public static readonly Materia Jump = new Materia { Name = "Jump"};
-        public static readonly Materia Kick = new Materia { Name = "Kick"};
-        public static readonly Materia NA_504901820 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901830 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901840 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901850 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901860 = new Materia { Name = "NA"};
-        public static readonly Materia NA_504901870 = new Materia { Name = "NA"};
-        public static readonly Materia Burst = new Materia { Name = "Burst"};
-        public static readonly Materia Quake = new Materia { Name = "Quake"};
         public static readonly Materia PureHeart = new Materia { Name = "Pure Heart", MateriaId = "1500000004", Description = "ピュアハート", CountId = "90004", EquipmentActiveAbility = "", EquipmentPassiveAbility = "910045", ItemStack = "99", ItemBuyPrice = "100000", ItemSellPrice = "10000", ItemIdClone = "700000077", BitNumber = "90004"};
         public static readonly Materia WinterWard = new Materia { Name = "Winter Ward", MateriaId = "1500000005", Description = "防寒対策", CountId = "90005", EquipmentActiveAbility = "", EquipmentPassiveAbility = "910057", ItemStack = "99", ItemBuyPrice = "10000", ItemSellPrice = "1000", ItemIdClone = "1500000005", BitNumber = "90005"};
         public static readonly Materia Deliverance = new Materia { Name = "Deliverance", MateriaId = "1500000007", Description = "引渡し", CountId = "90006", EquipmentActiveAbility = "", EquipmentPassiveAbility = "910066", ItemStack = "99", ItemBuyPrice = "10000", ItemSellPrice = "1000", ItemIdClone = "700000077", BitNumber = "90006"};
@@ -514,12 +336,12 @@ namespace BraveHaxvius.Data
         public static readonly Materia GeneralOffensive = new Materia { Name = "General Offensive", MateriaId = "504213740", Description = "総攻撃", CountId = "2133810", EquipmentActiveAbility = "", EquipmentPassiveAbility = "213740", ItemStack = "99", ItemBuyPrice = "100000", ItemSellPrice = "10000", ItemIdClone = "700000077", BitNumber = "635"};
         public static readonly Materia MAG_504100110 = new Materia { Name = "MAG +20%", MateriaId = "504100110", Description = "魔力+20%", CountId = "2115030", EquipmentActiveAbility = "", EquipmentPassiveAbility = "100110", ItemStack = "99", ItemBuyPrice = "5000", ItemSellPrice = "500", ItemIdClone = "700000077", BitNumber = "636"};
         public static readonly Materia EquipInstrument = new Materia { Name = "Equip Instrument", MateriaId = "504100860", Description = "楽器装備", CountId = "2155110", EquipmentActiveAbility = "", EquipmentPassiveAbility = "100860", ItemStack = "99", ItemBuyPrice = "15000", ItemSellPrice = "1500", ItemIdClone = "700000096", BitNumber = "637"};
-        public static readonly Materia Darkra_504020460 = new Materia { Name = "Darkra", MateriaId = "504020460", Description = "ダーラ", CountId = "1250820", EquipmentActiveAbility = "20460", EquipmentPassiveAbility = "", ItemStack = "99", ItemBuyPrice = "8000", ItemSellPrice = "800", ItemIdClone = "700000026", BitNumber = "638"};
+        public static readonly Materia Darkra = new Materia { Name = "Darkra", MateriaId = "504020460", Description = "ダーラ", CountId = "1250820", EquipmentActiveAbility = "20460", EquipmentPassiveAbility = "", ItemStack = "99", ItemBuyPrice = "8000", ItemSellPrice = "800", ItemIdClone = "700000026", BitNumber = "638"};
         public static readonly Materia FiraBlade = new Materia { Name = "Fira Blade", MateriaId = "504200610", Description = "ファイラ剣", CountId = "2240020", EquipmentActiveAbility = "", EquipmentPassiveAbility = "200610", ItemStack = "99", ItemBuyPrice = "8000", ItemSellPrice = "800", ItemIdClone = "700000021", BitNumber = "639"};
         public static readonly Materia AwesomeSwordsman = new Materia { Name = "Awesome Swordsman", MateriaId = "504213800", Description = "凛々しき剣士", CountId = "2151710", EquipmentActiveAbility = "", EquipmentPassiveAbility = "213800", ItemStack = "99", ItemBuyPrice = "100000", ItemSellPrice = "10000", ItemIdClone = "700000072", BitNumber = "640"};
         public static readonly Materia PureWhiteBlessing = new Materia { Name = "Pure White Blessing", MateriaId = "504214350", Description = "純白の祝福", CountId = "2171980", EquipmentActiveAbility = "", EquipmentPassiveAbility = "214350", ItemStack = "99", ItemBuyPrice = "100000", ItemSellPrice = "10000", ItemIdClone = "700000091", BitNumber = "641"};
         public static readonly Materia HighSpirits = new Materia { Name = "High Spirits", MateriaId = "504214360", Description = "気炎万丈", CountId = "2133820", EquipmentActiveAbility = "", EquipmentPassiveAbility = "214360", ItemStack = "99", ItemBuyPrice = "30000", ItemSellPrice = "3000", ItemIdClone = "700000077", BitNumber = "642"};
-        public static readonly Materia NA_504214720 = new Materia { Name = "N/A", MateriaId = "504214720", Description = "アルタメノスの光", CountId = "2151720", EquipmentActiveAbility = "", EquipmentPassiveAbility = "214720", ItemStack = "99", ItemBuyPrice = "30000", ItemSellPrice = "3000", ItemIdClone = "700000095", BitNumber = "643"};
+        public static readonly Materia NA = new Materia { Name = "N/A", MateriaId = "504214720", Description = "アルタメノスの光", CountId = "2151720", EquipmentActiveAbility = "", EquipmentPassiveAbility = "214720", ItemStack = "99", ItemBuyPrice = "30000", ItemSellPrice = "3000", ItemIdClone = "700000095", BitNumber = "643"};
         public static readonly Materia DragonKiller_504211360 = new Materia { Name = "Dragon Killer+", MateriaId = "504211360", Description = "ドラゴンキラー改", CountId = "2152310", EquipmentActiveAbility = "", EquipmentPassiveAbility = "211360", ItemStack = "99", ItemBuyPrice = "30000", ItemSellPrice = "3000", ItemIdClone = "700000079", BitNumber = "645"};
         public static readonly Materia MagesResolution = new Materia { Name = "Mage's Resolution", MateriaId = "504214930", Description = "魔道士の覚悟", CountId = "2151731", EquipmentActiveAbility = "", EquipmentPassiveAbility = "214930", ItemStack = "99", ItemBuyPrice = "50000", ItemSellPrice = "5000", ItemIdClone = "700000095", BitNumber = "646"};
         public static readonly Materia BusterStyle = new Materia { Name = "Buster Style", MateriaId = "504214990", Description = "バスターフォーム", CountId = "2171030", EquipmentActiveAbility = "", EquipmentPassiveAbility = "214990", ItemStack = "99", ItemBuyPrice = "100000", ItemSellPrice = "10000", ItemIdClone = "700000076", BitNumber = "647"};
@@ -987,6 +809,20 @@ namespace BraveHaxvius.Data
         public static readonly Materia TwinSwordsMastery = new Materia { Name = "Twin Swords Mastery", MateriaId = "504231562", Description = "ツインソードの奥義", CountId = "2171081", EquipmentActiveAbility = "", EquipmentPassiveAbility = "231562", ItemStack = "99", ItemBuyPrice = "200000", ItemSellPrice = "20000", ItemIdClone = "700000072", BitNumber = "984"};
         public static readonly Materia LeaderoftheSoiree = new Materia { Name = "Leader of the Soiree", MateriaId = "504231910", Description = "夜会主宰者", CountId = "2151322", EquipmentActiveAbility = "", EquipmentPassiveAbility = "231910", ItemStack = "99", ItemBuyPrice = "100000", ItemSellPrice = "10000", ItemIdClone = "700000095", BitNumber = "994"};
         public static readonly Materia WarGoddessInsignia_504232200 = new Materia { Name = "War Goddess' Insignia+", MateriaId = "504232200", Description = "武神の戦印・改", CountId = "2173060", EquipmentActiveAbility = "", EquipmentPassiveAbility = "232200", ItemStack = "99", ItemBuyPrice = "100000", ItemSellPrice = "10000", ItemIdClone = "700000077", BitNumber = "1005"};
+        public static readonly Materia EquipGun = new Materia { Name = "Equip Gun", MateriaId = "504231970", Description = "銃装備", CountId = "2155140", EquipmentActiveAbility = "", EquipmentPassiveAbility = "231970", ItemStack = "99", ItemBuyPrice = "15000", ItemSellPrice = "1500", ItemIdClone = "700000096", BitNumber = "995"};
+        public static readonly Materia ExploringtheDepths = new Materia { Name = "Exploring the Depths", MateriaId = "504231972", Description = "深層探検家", CountId = "2134350", EquipmentActiveAbility = "", EquipmentPassiveAbility = "231972", ItemStack = "99", ItemBuyPrice = "50000", ItemSellPrice = "5000", ItemIdClone = "700000077", BitNumber = "996"};
+        public static readonly Materia Deconstruction = new Materia { Name = "Deconstruction", MateriaId = "504233336", Description = "ディコンストラクション", CountId = "2290003", EquipmentActiveAbility = "", EquipmentPassiveAbility = "233336", ItemStack = "99", ItemBuyPrice = "50000", ItemSellPrice = "5000", ItemIdClone = "700000003", BitNumber = "1042"};
+        public static readonly Materia DanceMaster = new Materia { Name = "Dance Master", MateriaId = "504233332", Description = "踊り子の極意", CountId = "2113220", EquipmentActiveAbility = "", EquipmentPassiveAbility = "233332", ItemStack = "99", ItemBuyPrice = "100000", ItemSellPrice = "10000", ItemIdClone = "700000095", BitNumber = "1041"};
+        public static readonly Materia BondswiththeAeons = new Materia { Name = "Bonds with the Aeons", MateriaId = "504232704", Description = "召喚獣たちとの絆", CountId = "2137152", EquipmentActiveAbility = "", EquipmentPassiveAbility = "232704", ItemStack = "99", ItemBuyPrice = "100000", ItemSellPrice = "10000", ItemIdClone = "700000077", BitNumber = "1022"};
+        public static readonly Materia RonsoGuardian = new Materia { Name = "Ronso Guardian", MateriaId = "504232705", Description = "ロンゾ族のガード", CountId = "2113211", EquipmentActiveAbility = "", EquipmentPassiveAbility = "232705", ItemStack = "99", ItemBuyPrice = "100000", ItemSellPrice = "10000", ItemIdClone = "700000091", BitNumber = "1023"};
+        public static readonly Materia AceofAces = new Materia { Name = "Ace of Aces", MateriaId = "504232700", Description = "正真正銘のエース", CountId = "2139101", EquipmentActiveAbility = "", EquipmentPassiveAbility = "232700", ItemStack = "99", ItemBuyPrice = "100000", ItemSellPrice = "10000", ItemIdClone = "700000076", BitNumber = "1020"};
+        public static readonly Materia OriginatoroftheFinalSummoning = new Materia { Name = "Originator of the Final Summoning", MateriaId = "504232703", Description = "究極召喚の伝承者", CountId = "2137151", EquipmentActiveAbility = "", EquipmentPassiveAbility = "232703", ItemStack = "99", ItemBuyPrice = "200000", ItemSellPrice = "20000", ItemIdClone = "700000077", BitNumber = "1021"};
+        public static readonly Materia KnowledgeofAeons = new Materia { Name = "Knowledge of Aeons", MateriaId = "504232708", Description = "召喚の心得", CountId = "2137153", EquipmentActiveAbility = "", EquipmentPassiveAbility = "232708", ItemStack = "99", ItemBuyPrice = "50000", ItemSellPrice = "5000", ItemIdClone = "700000077", BitNumber = "1024"};
+/*VersionControldefinitions*/
+
+
+
+
 
 		public static readonly List<Materia> Materias = new List<Materia>
 		{
@@ -1102,7 +938,6 @@ namespace BraveHaxvius.Data
            Cura,
            DEF_504100130,
            EquipBow,
-           ReflectTest,
            Bravery,
            ATK_504100090,
            MAG_504100100,
@@ -1260,184 +1095,6 @@ namespace BraveHaxvius.Data
            DEF_504100140,
            ManufactedNethicite,
            EarthResistance_504209550,
-           NA_504900120,
-           NA_504900130,
-           NA_504900140,
-           NA_504900150,
-           NA_504900160,
-           NA_504900170,
-           NA_504900180,
-           NA_504900190,
-           NA_504900200,
-           NA_504900210,
-           NA_504900220,
-           NA_504900230,
-           NA_504900240,
-           NA_504900250,
-           NA_504900260,
-           NA_504900270,
-           NA_504900280,
-           NA_504900290,
-           NA_504900300,
-           NA_504900310,
-           NA_504900320,
-           NA_504900330,
-           NA_504900340,
-           NA_504900350,
-           NA_504900360,
-           NA_504900370,
-           NA_504900380,
-           NA_504900390,
-           Firaja,
-           Blizzaja,
-           Thundaja,
-           Waterja,
-           Aeroja,
-           Stonja,
-           MirrorCounter,
-           LasswellLvl,
-           NA_504900480,
-           NA_504900490,
-           NA_504900500,
-           NA_504900510,
-           NA_504900520,
-           NA_504900530,
-           NA_504900540,
-           NA_504900550,
-           NA_504900560,
-           NA_504900570,
-           NA_504900580,
-           NA_504900590,
-           NA_504900600,
-           NA_504900610,
-           NA_504900620,
-           NA_504900630,
-           NA_504900640,
-           NA_504900650,
-           NA_504900660,
-           NA_504900670,
-           NA_504900680,
-           NA_504900690,
-           NA_504900700,
-           NA_504900710,
-           NA_504900720,
-           NA_504900730,
-           NA_504900740,
-           NA_504900750,
-           NA_504900760,
-           NA_504900770,
-           NA_504900780,
-           NA_504900790,
-           NA_504900800,
-           NA_504900810,
-           NA_504900820,
-           NA_504900830,
-           NA_504900840,
-           NA_504900850,
-           NA_504900860,
-           NA_504900870,
-           NA_504900880,
-           NA_504900890,
-           NA_504900900,
-           NA_504900910,
-           NA_504900920,
-           NA_504900930,
-           NA_504900940,
-           NA_504900950,
-           NA_504900960,
-           NA_504900970,
-           NA_504900980,
-           NA_504900990,
-           NA_504901000,
-           NA_504901010,
-           NA_504901020,
-           NA_504901030,
-           NA_504901040,
-           NA_504901050,
-           NA_504901060,
-           NA_504901070,
-           NA_504901080,
-           NA_504901090,
-           NA_504901100,
-           NA_504901110,
-           NA_504901120,
-           NA_504901130,
-           NA_504901140,
-           NA_504901150,
-           NA_504901160,
-           NA_504901170,
-           NA_504901180,
-           NA_504901190,
-           NA_504901200,
-           NA_504901210,
-           NA_504901220,
-           NA_504901230,
-           NA_504901240,
-           NA_504901250,
-           NA_504901260,
-           NA_504901270,
-           NA_504901280,
-           NA_504901290,
-           NA_504901300,
-           NA_504901310,
-           NA_504901320,
-           NA_504901330,
-           Dark,
-           Darkra_504901350,
-           Darkga,
-           NA_504901370,
-           NA_504901380,
-           NA_504901390,
-           NA_504901400,
-           NA_504901410,
-           NA_504901420,
-           NA_504901430,
-           NA_504901440,
-           NA_504901450,
-           NA_504901460,
-           NA_504901470,
-           NA_504901480,
-           NA_504901490,
-           NA_504901500,
-           NA_504901510,
-           NA_504901520,
-           Tornado,
-           NA_504901540,
-           NA_504901550,
-           NA_504901560,
-           NA_504901570,
-           NA_504901580,
-           NA_504901590,
-           NA_504901600,
-           NA_504901610,
-           NA_504901620,
-           NA_504901630,
-           NA_504901640,
-           NA_504901650,
-           NA_504901660,
-           NA_504901670,
-           NA_504901680,
-           NA_504901690,
-           NA_504901700,
-           NA_504901710,
-           NA_504901720,
-           NA_504901730,
-           NA_504901740,
-           NA_504901750,
-           NA_504901760,
-           NA_504901770,
-           NA_504901780,
-           NA_504901790,
-           Jump,
-           Kick,
-           NA_504901820,
-           NA_504901830,
-           NA_504901840,
-           NA_504901850,
-           NA_504901860,
-           NA_504901870,
-           Burst,
-           Quake,
            PureHeart,
            WinterWard,
            Deliverance,
@@ -1487,12 +1144,12 @@ namespace BraveHaxvius.Data
            GeneralOffensive,
            MAG_504100110,
            EquipInstrument,
-           Darkra_504020460,
+           Darkra,
            FiraBlade,
            AwesomeSwordsman,
            PureWhiteBlessing,
            HighSpirits,
-           NA_504214720,
+           NA,
            DragonKiller_504211360,
            MagesResolution,
            BusterStyle,
@@ -1960,6 +1617,20 @@ namespace BraveHaxvius.Data
            TwinSwordsMastery,
            LeaderoftheSoiree,
            WarGoddessInsignia_504232200,
+           EquipGun,
+           ExploringtheDepths,
+           Deconstruction,
+           DanceMaster,
+           BondswiththeAeons,
+           RonsoGuardian,
+           AceofAces,
+           OriginatoroftheFinalSummoning,
+           KnowledgeofAeons,
+/*VersionControldefinitionsList*/
+
+
+
+
 		};
     }
 }

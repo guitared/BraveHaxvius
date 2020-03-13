@@ -1,14 +1,14 @@
-﻿using System;
+﻿using BraveHaxvius;
+using BraveHaxvius.Data;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using BraveHaxvius;
-using BraveHaxvius.Data;
 
 namespace DataExtractor
 {
@@ -41,6 +41,7 @@ namespace BraveHaxvius.Data
         static Regex varRegEx = new Regex(@"([a-zA-Z]+[a-zA-Z0-9_]*)");
         static List<String> DecodeFile(JToken rawFile)
         {
+
             var name = rawFile[Variable.KeyName].ToString();
             var version = rawFile[Variable.Value].ToString();
             var loc = "mst";
@@ -60,6 +61,7 @@ namespace BraveHaxvius.Data
         }
         static List<String> DecodeFile(String name, String version)
         {
+
             var loc = "mst";
             if (name.Contains("F_TEXT"))
                 loc = "localized_texts/en";
@@ -130,9 +132,10 @@ namespace BraveHaxvius.Data
                 MstVersion = "0"
             };
             var init = bot.Network.SendPacket(Request.Initialize);
-            var newMsts = init[GameObject.VersionInfo]; 
+            var newMsts = init[GameObject.VersionInfo];
             var F_LOCALIZED_TEXT_MST = DecodeFile(newMsts.First(m => m[Variable.KeyName].ToString() == "F_LOCALIZED_TEXT_MST"));
-            F_LOCALIZED_TEXT_MST.ForEach(l => {
+            F_LOCALIZED_TEXT_MST.ForEach(l =>
+            {
                 newMsts.Last.AddAfterSelf(new JObject(
                 new JProperty(Variable.KeyName, ((JObject)JsonConvert.DeserializeObject(l))[Variable.KeyName].ToString()),
                 new JProperty(Variable.Value, ((JObject)JsonConvert.DeserializeObject(l))["00zAYGYS"].ToString())));
@@ -163,7 +166,7 @@ namespace BraveHaxvius.Data
                     {
                         StringBuilder sb = new StringBuilder();
                         var keys = (JObject)JsonConvert.DeserializeObject(entireFile.First());
-                        foreach(var key in keys)
+                        foreach (var key in keys)
                         {
                             if (Variable.Variables.ContainsKey(key.Key))
                                 sb.Append(Variable.Variables.FirstOrDefault(k => k.Key == key.Key).Value + " (" + key.Key + "),");
@@ -174,11 +177,11 @@ namespace BraveHaxvius.Data
                         foreach (var line in entireFile)
                         {
                             var obj = (JObject)JsonConvert.DeserializeObject(line);
-                            foreach(var o in obj)
+                            foreach (var o in obj)
                             {
                                 if (o.Key == Variable.Description)
                                 {
-                                    try { sb.Append(Unit.Units.First(m => m.UnitId == obj[Variable.UnitId].ToString()).Name.Replace(",","|") + ","); } catch { sb.Append(o.Value + ","); }
+                                    try { sb.Append(Unit.Units.First(m => m.UnitId == obj[Variable.UnitId].ToString()).Name.Replace(",", "|") + ","); } catch { sb.Append(o.Value + ","); }
                                 }
                                 else
                                     sb.Append(o.Value.ToString().Replace(",", "|") + ",");
@@ -244,19 +247,35 @@ namespace BraveHaxvius.Data
             var translations = DecodeFile(msts.First(m => m[Variable.KeyName].ToString() == translation));
             var json = DecodeFile(msts.First(m => m[Variable.KeyName].ToString() == mst));
             DumpTranslation(translations, json, translation, mst, className, members);
-            
+
         }
-        
-        
+
+
         static void DumpTranslation(String translationVersion, String jsonVersion, String translation, String mst, String className, Dictionary<String, String> members = null)
         {
             var translations = DecodeFile(translation, translationVersion);
             var json = DecodeFile(mst, jsonVersion);
             DumpTranslation(translations, json, translation, mst, className, members);
         }
+
         static void DumpTranslation(List<String> translations, List<String> json, String translation, String mst, String className, Dictionary<String, String> members = null)
         {
-            Logger.Out($"Building : {className}.cs");
+
+            string updateFile = @"..\BraveHaxvius\Data\" + className + ".cs";
+            string text = "";
+            string versiontoUpdate = "";
+            bool IsUpdateting = false;
+            if (File.Exists(updateFile))
+            {
+                text = System.IO.File.ReadAllText(updateFile);
+                IsUpdateting = text.Contains("---VersionControl");
+            }
+
+            if (IsUpdateting)
+                versiontoUpdate = text.Split(new string[] { "---VersionControl" }, StringSplitOptions.None)[0].Remove(0, 2);
+
+
+
             if (members == null)
                 members = new Dictionary<string, string>();
             var mstList = json.Select(m => (JObject)JsonConvert.DeserializeObject(m)).ToList();
@@ -267,18 +286,24 @@ namespace BraveHaxvius.Data
             //classVars += "        public String Id { get; set; }" + Environment.NewLine;
             var variables = mstList.FirstOrDefault();
             var idKey = "";
-            foreach(var v in variables)
+            foreach (var v in variables)
             {
                 var variable = Variable.Variables.FirstOrDefault(v2 => v2.Key == v.Key);
                 if (!variable.Equals(default(KeyValuePair<String, String>)))
                 {
                     members.Add(variable.Value, variable.Key);
-                    if (idKey == "" && translation.ToLower().Contains(variable.Value.Replace("Id","").ToLower()))
+                    if (idKey == "" && translation.ToLower().Contains(variable.Value.Replace("Id", "").ToLower()))
                         idKey = variable.Key;
                 }
             }
             foreach (var member in members)
                 classVars += "        public String " + member.Key + " { get; set; }" + Environment.NewLine;
+            var lastTranslation = translations.Last();
+            translations.RemoveRange(0, translations.IndexOf(versiontoUpdate) + 1);
+            var t = IsUpdateting ? "Updating" : "Building";
+            Logger.Out($"{t} {className}.cs,  Adding {translations.Count}");
+            if (translations.Count < 1)
+                return;
 
             foreach (var line in translations)
             {
@@ -300,7 +325,7 @@ namespace BraveHaxvius.Data
                 {
                     if (idKey == "")
                         continue;
-                    var value = (mstList.FirstOrDefault(m => m[idKey].ToString() == id))?[member.Value]?.ToString();
+                    var value = (mstList.FirstOrDefault(m => m[idKey].ToString() == id))?[member.Value]?.ToString()?.Replace("\"", "");
                     if (value != null)
                         initClass.Add(member.Key + " = \"" + value + "\"");
                 }
@@ -309,14 +334,26 @@ namespace BraveHaxvius.Data
                 definitionsList.AppendLine($"           {varName},");
             }
             var file = new StringBuilder();
-            file.Append(fileHeader.Replace("CLASSNAME", className));
-            file.AppendLine(classVars);
-            file.Append(definitions.ToString());
-            file.AppendLine(fileMiddle.Replace("CLASSNAME", className));
-            file.Append(definitionsList.ToString());
-            file.Append(fileFooter);
-            File.WriteAllText(@"..\BraveHaxvius\Data\" + className + ".cs", file.ToString());
+            if (!IsUpdateting)
+            {
+                file.Append("//" + lastTranslation + "---VersionControl" + Environment.NewLine + fileHeader.Replace("CLASSNAME", className));
+                file.AppendLine(classVars);
+                file.Append(definitions.ToString() + "/*VersionControldefinitions*/" + Environment.NewLine);
+                file.AppendLine(fileMiddle.Replace("CLASSNAME", className));
+                file.Append(definitionsList.ToString() + "/*VersionControldefinitionsList*/" + Environment.NewLine);
+                file.Append(fileFooter);
+                File.WriteAllText(@"..\BraveHaxvius\Data\" + className + ".cs", file.ToString());
+            }
+            else
+            {
+                text = text.Replace(versiontoUpdate, lastTranslation);
+                text = text.Replace(@"/*VersionControldefinitions*/", definitions.ToString() + "/*VersionControldefinitions*/" + Environment.NewLine);
+                text = text.Replace(@"/*VersionControldefinitionsList*/", definitionsList.ToString() + "/*VersionControldefinitionsList*/" + Environment.NewLine);
+                File.WriteAllText(@"..\BraveHaxvius\Data\" + className + ".cs", text);
+            }
+
         }
+
         static void Main(string[] args)
         {
             /*DumpTranslation("87", "65", "F_TEXT_UNITS_NAME", "F_UNIT_MST", "Unit", new Dictionary<String, String>  {
@@ -358,11 +395,14 @@ namespace BraveHaxvius.Data
             var init = bot.Network.SendPacket(Request.Initialize);
             var newMsts = init[GameObject.VersionInfo];
             var F_LOCALIZED_TEXT_MST = DecodeFile(newMsts.First(m => m[Variable.KeyName].ToString() == "F_LOCALIZED_TEXT_MST"));
-            F_LOCALIZED_TEXT_MST.ForEach(l => {
+            F_LOCALIZED_TEXT_MST.ForEach(l =>
+            {
                 newMsts.Last.AddAfterSelf(new JObject(
                 new JProperty(Variable.KeyName, ((JObject)JsonConvert.DeserializeObject(l))[Variable.KeyName].ToString()),
                 new JProperty(Variable.Value, ((JObject)JsonConvert.DeserializeObject(l))["00zAYGYS"].ToString())));
             });
+
+
             {
                 var switchJson = DecodeFile(newMsts.First(m => m[Variable.KeyName].ToString() == "F_SUBLIMATION_RECIPE_MST"));
                 var switchMst = switchJson.Select(m => (JObject)JsonConvert.DeserializeObject(m)).ToList();

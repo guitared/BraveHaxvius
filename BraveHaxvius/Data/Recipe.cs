@@ -1,3 +1,4 @@
+//MST_RECIPEBOOK_NAME_904003450^Cobra Hat^Cobra Hat---VersionControl
 using System;
 using System.Collections.Generic;
 
@@ -232,12 +233,8 @@ namespace BraveHaxvius.Data
         public static readonly Recipe Dispel = new Recipe { Name = "Dispel"};
         public static readonly Recipe Faith = new Recipe { Name = "Faith"};
         public static readonly Recipe SpiritSlayer = new Recipe { Name = "Spirit Slayer"};
-        public static readonly Recipe HP_905101500 = new Recipe { Name = "HP +15%"};
         public static readonly Recipe SleepBlade = new Recipe { Name = "Sleep Blade"};
         public static readonly Recipe AeroBlade = new Recipe { Name = "Aero Blade"};
-        public static readonly Recipe StonraBlade_905200660 = new Recipe { Name = "Stonra Blade"};
-        public static readonly Recipe VorpalAxe = new Recipe { Name = "Vorpal Axe"};
-        public static readonly Recipe GaeBolg = new Recipe { Name = "Gae Bolg"};
         public static readonly Recipe LightCurtain = new Recipe { Name = "Light Curtain"};
         public static readonly Recipe WyvernsFeather = new Recipe { Name = "Wyvern's Feather"};
         public static readonly Recipe WhiteFang = new Recipe { Name = "White Fang"};
@@ -253,8 +250,8 @@ namespace BraveHaxvius.Data
         public static readonly Recipe MoraleTalisman = new Recipe { Name = "Morale Talisman"};
         public static readonly Recipe RodofGravity = new Recipe { Name = "Rod of Gravity"};
         public static readonly Recipe VoidVessel = new Recipe { Name = "Void Vessel"};
-        public static readonly Recipe StonraBlade_1000000004 = new Recipe { Name = "Stonra Blade"};
-        public static readonly Recipe HP_1000000005 = new Recipe { Name = "HP +15%"};
+        public static readonly Recipe StonraBlade = new Recipe { Name = "Stonra Blade"};
+        public static readonly Recipe HP = new Recipe { Name = "HP +15%"};
         public static readonly Recipe BurstShot = new Recipe { Name = "Burst Shot"};
         public static readonly Recipe StandardMogcakePack = new Recipe { Name = "Standard Mogcake Pack"};
         public static readonly Recipe RareMogcakePack = new Recipe { Name = "Rare Mogcake Pack"};
@@ -332,10 +329,10 @@ namespace BraveHaxvius.Data
         public static readonly Recipe Betelgeuse = new Recipe { Name = "Betelgeuse"};
         public static readonly Recipe GoldenShield = new Recipe { Name = "Golden Shield"};
         public static readonly Recipe Imperil = new Recipe { Name = "Imperil"};
-        public static readonly Recipe Microphone_1000000014 = new Recipe { Name = "Microphone"};
+        public static readonly Recipe Microphone = new Recipe { Name = "Microphone"};
         public static readonly Recipe EveningGloves = new Recipe { Name = "Evening Gloves"};
-        public static readonly Recipe BunnyMask_1000000016 = new Recipe { Name = "Bunny Mask"};
-        public static readonly Recipe StylishBlackDress_1000000017 = new Recipe { Name = "Stylish Black Dress"};
+        public static readonly Recipe BunnyMask = new Recipe { Name = "Bunny Mask"};
+        public static readonly Recipe StylishBlackDress = new Recipe { Name = "Stylish Black Dress"};
         public static readonly Recipe MemoryCandy = new Recipe { Name = "Memory Candy"};
         public static readonly Recipe MageMasher = new Recipe { Name = "Mage Masher"};
         public static readonly Recipe RasAlgethi = new Recipe { Name = "Ras Algethi"};
@@ -350,10 +347,7 @@ namespace BraveHaxvius.Data
         public static readonly Recipe SlickDart = new Recipe { Name = "Slick Dart"};
         public static readonly Recipe Raikiri = new Recipe { Name = "Raikiri"};
         public static readonly Recipe MoogleSpear = new Recipe { Name = "Moogle Spear"};
-        public static readonly Recipe BreakShot = new Recipe { Name = "Break Shot"};
-        public static readonly Recipe collab_903001270 = new Recipe { Name = "collab"};
         public static readonly Recipe TwinWhip = new Recipe { Name = "Twin Whip"};
-        public static readonly Recipe Microphone_903001290 = new Recipe { Name = "Microphone"};
         public static readonly Recipe TorrentRing = new Recipe { Name = "Torrent Ring"};
         public static readonly Recipe DivineShield = new Recipe { Name = "Divine Shield"};
         public static readonly Recipe RavenBeret = new Recipe { Name = "Raven Beret"};
@@ -365,27 +359,7 @@ namespace BraveHaxvius.Data
         public static readonly Recipe MoogleCape = new Recipe { Name = "Moogle Cape"};
         public static readonly Recipe UnsuiClothes = new Recipe { Name = "Unsui Clothes"};
         public static readonly Recipe GoldenHelm = new Recipe { Name = "Golden Helm"};
-        public static readonly Recipe collab_904001620 = new Recipe { Name = "collab"};
-        public static readonly Recipe collab_904001630 = new Recipe { Name = "collab"};
-        public static readonly Recipe collab_904001640 = new Recipe { Name = "collab"};
-        public static readonly Recipe collab_904001650 = new Recipe { Name = "collab"};
-        public static readonly Recipe collab_904001660 = new Recipe { Name = "collab"};
-        public static readonly Recipe collab_904001670 = new Recipe { Name = "collab"};
-        public static readonly Recipe collab_904001680 = new Recipe { Name = "collab"};
-        public static readonly Recipe collab_904001690 = new Recipe { Name = "collab"};
-        public static readonly Recipe collab_904001700 = new Recipe { Name = "collab"};
-        public static readonly Recipe FestivalRobe_904001710 = new Recipe { Name = "Festival Robe+"};
-        public static readonly Recipe FestivalCap_904001720 = new Recipe { Name = "Festival Cap+"};
         public static readonly Recipe PlatinumTiara = new Recipe { Name = "Platinum Tiara"};
-        public static readonly Recipe Fransisca = new Recipe { Name = "Fransisca"};
-        public static readonly Recipe GloryStaff = new Recipe { Name = "Glory Staff"};
-        public static readonly Recipe KrisKnife = new Recipe { Name = "Kris Knife"};
-        public static readonly Recipe RoyalRing = new Recipe { Name = "Royal Ring"};
-        public static readonly Recipe collab_904001780 = new Recipe { Name = "collab"};
-        public static readonly Recipe collab_904001790 = new Recipe { Name = "collab"};
-        public static readonly Recipe EveningGlove = new Recipe { Name = "Evening Glove"};
-        public static readonly Recipe BunnyMask_904001810 = new Recipe { Name = "Bunny Mask"};
-        public static readonly Recipe StylishBlackDress_904001820 = new Recipe { Name = "Stylish Black Dress"};
         public static readonly Recipe Darkra = new Recipe { Name = "Darkra"};
         public static readonly Recipe DragonKiller = new Recipe { Name = "Dragon Killer+"};
         public static readonly Recipe MogSearch = new Recipe { Name = "Mog Search"};
@@ -397,10 +371,10 @@ namespace BraveHaxvius.Data
         public static readonly Recipe MagicalEgg = new Recipe { Name = "Magical Egg"};
         public static readonly Recipe RadiantEgg = new Recipe { Name = "Radiant Egg"};
         public static readonly Recipe StaffofWrath = new Recipe { Name = "Staff of Wrath"};
-        public static readonly Recipe CrownofJustice_1000000025 = new Recipe { Name = "Crown of Justice"};
-        public static readonly Recipe BlackBandana_1000000026 = new Recipe { Name = "Black Bandana"};
+        public static readonly Recipe CrownofJustice = new Recipe { Name = "Crown of Justice"};
+        public static readonly Recipe BlackBandana = new Recipe { Name = "Black Bandana"};
         public static readonly Recipe SecondKnife = new Recipe { Name = "Second Knife"};
-        public static readonly Recipe IcyVeins_1000000028 = new Recipe { Name = "Icy Veins"};
+        public static readonly Recipe IcyVeins = new Recipe { Name = "Icy Veins"};
         public static readonly Recipe ColdSnap = new Recipe { Name = "Cold Snap"};
         public static readonly Recipe DrakesclawRod = new Recipe { Name = "Drakesclaw Rod"};
         public static readonly Recipe DrakesguardRobe = new Recipe { Name = "Drakesguard Robe"};
@@ -443,15 +417,8 @@ namespace BraveHaxvius.Data
         public static readonly Recipe Valiant = new Recipe { Name = "Valiant"};
         public static readonly Recipe CypressPile = new Recipe { Name = "Cypress Pile"};
         public static readonly Recipe PlatinumSaber = new Recipe { Name = "Platinum Saber"};
-        public static readonly Recipe Darkbringer = new Recipe { Name = "Darkbringer"};
-        public static readonly Recipe YggdrasilStaff = new Recipe { Name = "Yggdrasil Staff"};
-        public static readonly Recipe Dragvandil = new Recipe { Name = "Dragvandil"};
-        public static readonly Recipe SweetKiss = new Recipe { Name = "Sweet Kiss"};
         public static readonly Recipe PlatinumMace = new Recipe { Name = "Platinum Mace"};
         public static readonly Recipe PlatinumWhip = new Recipe { Name = "Platinum Whip"};
-        public static readonly Recipe TamersGloves = new Recipe { Name = "Tamer's Gloves"};
-        public static readonly Recipe SecretKnife = new Recipe { Name = "Secret Knife"};
-        public static readonly Recipe StaffofResentment = new Recipe { Name = "Staff of Resentment"};
         public static readonly Recipe PlatinumEdge = new Recipe { Name = "Platinum Edge"};
         public static readonly Recipe FierceBow = new Recipe { Name = "Fierce Bow"};
         public static readonly Recipe Kogarasumaru = new Recipe { Name = "Kogarasumaru"};
@@ -463,11 +430,6 @@ namespace BraveHaxvius.Data
         public static readonly Recipe A1ClassPowershield = new Recipe { Name = "A1-Class Powershield"};
         public static readonly Recipe AssistSuit = new Recipe { Name = "Assist Suit"};
         public static readonly Recipe ChobhamArmor = new Recipe { Name = "Chobham Armor"};
-        public static readonly Recipe TacticalManual = new Recipe { Name = "Tactical Manual"};
-        public static readonly Recipe MagnoliasUniform = new Recipe { Name = "Magnolia's Uniform"};
-        public static readonly Recipe IcyVeins_904002010 = new Recipe { Name = "Icy Veins"};
-        public static readonly Recipe BlackBandana_904002020 = new Recipe { Name = "Black Bandana"};
-        public static readonly Recipe CrownofJustice_904002030 = new Recipe { Name = "Crown of Justice"};
         public static readonly Recipe JeweledBelt = new Recipe { Name = "Jeweled Belt"};
         public static readonly Recipe PlatinumBreastplate = new Recipe { Name = "Platinum Breastplate"};
         public static readonly Recipe RiotGear = new Recipe { Name = "Riot Gear"};
@@ -498,10 +460,10 @@ namespace BraveHaxvius.Data
         public static readonly Recipe JadeMoonPendant = new Recipe { Name = "Jade Moon Pendant"};
         public static readonly Recipe JadeSunPendant = new Recipe { Name = "Jade Sun Pendant"};
         public static readonly Recipe FieryPassion = new Recipe { Name = "Fiery Passion"};
-        public static readonly Recipe StaffofOsiris_1000000055 = new Recipe { Name = "Staff of Osiris"};
+        public static readonly Recipe StaffofOsiris = new Recipe { Name = "Staff of Osiris"};
         public static readonly Recipe IcyDeath = new Recipe { Name = "Icy Death"};
-        public static readonly Recipe Flamethrower_1000000057 = new Recipe { Name = "Flamethrower"};
-        public static readonly Recipe ToxicShotgun_1000000058 = new Recipe { Name = "Toxic Shotgun"};
+        public static readonly Recipe Flamethrower = new Recipe { Name = "Flamethrower"};
+        public static readonly Recipe ToxicShotgun = new Recipe { Name = "Toxic Shotgun"};
         public static readonly Recipe OnyxSpiritofRa = new Recipe { Name = "Onyx Spirit of Ra"};
         public static readonly Recipe GoldRingofSet = new Recipe { Name = "Gold Ring of Set"};
         public static readonly Recipe PlatinumLance = new Recipe { Name = "Platinum Lance"};
@@ -512,14 +474,6 @@ namespace BraveHaxvius.Data
         public static readonly Recipe SacredClaws = new Recipe { Name = "Sacred Claws"};
         public static readonly Recipe DragovianSpear = new Recipe { Name = "Dragovian Spear"};
         public static readonly Recipe WolfMask = new Recipe { Name = "Wolf Mask"};
-        public static readonly Recipe FestivalRobe_904002140 = new Recipe { Name = "Festival Robe"};
-        public static readonly Recipe FestivalCap_904002150 = new Recipe { Name = "Festival Cap"};
-        public static readonly Recipe YinYangCharm_904002180 = new Recipe { Name = "Yin Yang Charm"};
-        public static readonly Recipe SantasClothesII = new Recipe { Name = "Santa's Clothes II"};
-        public static readonly Recipe SantasHatII = new Recipe { Name = "Santa's Hat II"};
-        public static readonly Recipe TsukumoDoll_904002210 = new Recipe { Name = "Tsukumo Doll"};
-        public static readonly Recipe KimonoVest_904002220 = new Recipe { Name = "Kimono Vest"};
-        public static readonly Recipe SantasCane = new Recipe { Name = "Santa's Cane"};
         public static readonly Recipe PlatinumFist = new Recipe { Name = "Platinum Fist"};
         public static readonly Recipe GemofCreation = new Recipe { Name = "Gem of Creation"};
         public static readonly Recipe GemofVision = new Recipe { Name = "Gem of Vision"};
@@ -531,10 +485,6 @@ namespace BraveHaxvius.Data
         public static readonly Recipe FlowerSuit = new Recipe { Name = "Flower Suit"};
         public static readonly Recipe MagicalArmor = new Recipe { Name = "Magical Armor"};
         public static readonly Recipe FrostyRing = new Recipe { Name = "Frosty Ring"};
-        public static readonly Recipe StaffofOsiris_904002370 = new Recipe { Name = "Staff of Osiris"};
-        public static readonly Recipe ToxicShotgun_904002380 = new Recipe { Name = "Toxic Shotgun"};
-        public static readonly Recipe Flamethrower_904002390 = new Recipe { Name = "Flamethrower"};
-        public static readonly Recipe GoldRingofSeth = new Recipe { Name = "Gold Ring of Seth"};
         public static readonly Recipe DiamondSword = new Recipe { Name = "Diamond Sword"};
         public static readonly Recipe DiamondArmor = new Recipe { Name = "Diamond Armor"};
         public static readonly Recipe RicosWingsuit = new Recipe { Name = "Rico's Wingsuit"};
@@ -543,11 +493,11 @@ namespace BraveHaxvius.Data
         public static readonly Recipe UVK = new Recipe { Name = "UVK-13"};
         public static readonly Recipe CSWraithR = new Recipe { Name = "CS Wraith 225R"};
         public static readonly Recipe UZabijak = new Recipe { Name = "U-24 Zabijak"};
-        public static readonly Recipe YinYangCharm_1000000067 = new Recipe { Name = "Yin Yang Charm"};
+        public static readonly Recipe YinYangCharm = new Recipe { Name = "Yin Yang Charm"};
         public static readonly Recipe VestmentofPrayers = new Recipe { Name = "Vestment of Prayers"};
         public static readonly Recipe WhiteBandana = new Recipe { Name = "White Bandana"};
-        public static readonly Recipe TsukumoDoll_1000000070 = new Recipe { Name = "Tsukumo Doll"};
-        public static readonly Recipe KimonoVest_1000000071 = new Recipe { Name = "Kimono Vest"};
+        public static readonly Recipe TsukumoDoll = new Recipe { Name = "Tsukumo Doll"};
+        public static readonly Recipe KimonoVest = new Recipe { Name = "Kimono Vest"};
         public static readonly Recipe ElvenStaff = new Recipe { Name = "Elven Staff"};
         public static readonly Recipe ZenithZAP = new Recipe { Name = "Zenith ZAP"};
         public static readonly Recipe TITAN = new Recipe { Name = "TITAN"};
@@ -727,6 +677,13 @@ namespace BraveHaxvius.Data
         public static readonly Recipe LoveisVital = new Recipe { Name = "Love is Vital"};
         public static readonly Recipe LoveisMagical = new Recipe { Name = "Love is Magical"};
         public static readonly Recipe EdelsEarrings = new Recipe { Name = "Edel's Earrings"};
+        public static readonly Recipe SniperGoggles = new Recipe { Name = "Sniper Goggles"};
+        public static readonly Recipe Paikea = new Recipe { Name = "Paikea"};
+        public static readonly Recipe Khandroma = new Recipe { Name = "Khandroma"};
+        public static readonly Recipe CobraKnife = new Recipe { Name = "Cobra Knife"};
+        public static readonly Recipe CobraHat = new Recipe { Name = "Cobra Hat"};
+/*VersionControldefinitions*/
+
 
 		public static readonly List<Recipe> Recipes = new List<Recipe>
 		{
@@ -951,12 +908,8 @@ namespace BraveHaxvius.Data
            Dispel,
            Faith,
            SpiritSlayer,
-           HP_905101500,
            SleepBlade,
            AeroBlade,
-           StonraBlade_905200660,
-           VorpalAxe,
-           GaeBolg,
            LightCurtain,
            WyvernsFeather,
            WhiteFang,
@@ -972,8 +925,8 @@ namespace BraveHaxvius.Data
            MoraleTalisman,
            RodofGravity,
            VoidVessel,
-           StonraBlade_1000000004,
-           HP_1000000005,
+           StonraBlade,
+           HP,
            BurstShot,
            StandardMogcakePack,
            RareMogcakePack,
@@ -1051,10 +1004,10 @@ namespace BraveHaxvius.Data
            Betelgeuse,
            GoldenShield,
            Imperil,
-           Microphone_1000000014,
+           Microphone,
            EveningGloves,
-           BunnyMask_1000000016,
-           StylishBlackDress_1000000017,
+           BunnyMask,
+           StylishBlackDress,
            MemoryCandy,
            MageMasher,
            RasAlgethi,
@@ -1069,10 +1022,7 @@ namespace BraveHaxvius.Data
            SlickDart,
            Raikiri,
            MoogleSpear,
-           BreakShot,
-           collab_903001270,
            TwinWhip,
-           Microphone_903001290,
            TorrentRing,
            DivineShield,
            RavenBeret,
@@ -1084,27 +1034,7 @@ namespace BraveHaxvius.Data
            MoogleCape,
            UnsuiClothes,
            GoldenHelm,
-           collab_904001620,
-           collab_904001630,
-           collab_904001640,
-           collab_904001650,
-           collab_904001660,
-           collab_904001670,
-           collab_904001680,
-           collab_904001690,
-           collab_904001700,
-           FestivalRobe_904001710,
-           FestivalCap_904001720,
            PlatinumTiara,
-           Fransisca,
-           GloryStaff,
-           KrisKnife,
-           RoyalRing,
-           collab_904001780,
-           collab_904001790,
-           EveningGlove,
-           BunnyMask_904001810,
-           StylishBlackDress_904001820,
            Darkra,
            DragonKiller,
            MogSearch,
@@ -1116,10 +1046,10 @@ namespace BraveHaxvius.Data
            MagicalEgg,
            RadiantEgg,
            StaffofWrath,
-           CrownofJustice_1000000025,
-           BlackBandana_1000000026,
+           CrownofJustice,
+           BlackBandana,
            SecondKnife,
-           IcyVeins_1000000028,
+           IcyVeins,
            ColdSnap,
            DrakesclawRod,
            DrakesguardRobe,
@@ -1162,15 +1092,8 @@ namespace BraveHaxvius.Data
            Valiant,
            CypressPile,
            PlatinumSaber,
-           Darkbringer,
-           YggdrasilStaff,
-           Dragvandil,
-           SweetKiss,
            PlatinumMace,
            PlatinumWhip,
-           TamersGloves,
-           SecretKnife,
-           StaffofResentment,
            PlatinumEdge,
            FierceBow,
            Kogarasumaru,
@@ -1182,11 +1105,6 @@ namespace BraveHaxvius.Data
            A1ClassPowershield,
            AssistSuit,
            ChobhamArmor,
-           TacticalManual,
-           MagnoliasUniform,
-           IcyVeins_904002010,
-           BlackBandana_904002020,
-           CrownofJustice_904002030,
            JeweledBelt,
            PlatinumBreastplate,
            RiotGear,
@@ -1217,10 +1135,10 @@ namespace BraveHaxvius.Data
            JadeMoonPendant,
            JadeSunPendant,
            FieryPassion,
-           StaffofOsiris_1000000055,
+           StaffofOsiris,
            IcyDeath,
-           Flamethrower_1000000057,
-           ToxicShotgun_1000000058,
+           Flamethrower,
+           ToxicShotgun,
            OnyxSpiritofRa,
            GoldRingofSet,
            PlatinumLance,
@@ -1231,14 +1149,6 @@ namespace BraveHaxvius.Data
            SacredClaws,
            DragovianSpear,
            WolfMask,
-           FestivalRobe_904002140,
-           FestivalCap_904002150,
-           YinYangCharm_904002180,
-           SantasClothesII,
-           SantasHatII,
-           TsukumoDoll_904002210,
-           KimonoVest_904002220,
-           SantasCane,
            PlatinumFist,
            GemofCreation,
            GemofVision,
@@ -1250,10 +1160,6 @@ namespace BraveHaxvius.Data
            FlowerSuit,
            MagicalArmor,
            FrostyRing,
-           StaffofOsiris_904002370,
-           ToxicShotgun_904002380,
-           Flamethrower_904002390,
-           GoldRingofSeth,
            DiamondSword,
            DiamondArmor,
            RicosWingsuit,
@@ -1262,11 +1168,11 @@ namespace BraveHaxvius.Data
            UVK,
            CSWraithR,
            UZabijak,
-           YinYangCharm_1000000067,
+           YinYangCharm,
            VestmentofPrayers,
            WhiteBandana,
-           TsukumoDoll_1000000070,
-           KimonoVest_1000000071,
+           TsukumoDoll,
+           KimonoVest,
            ElvenStaff,
            ZenithZAP,
            TITAN,
@@ -1446,6 +1352,13 @@ namespace BraveHaxvius.Data
            LoveisVital,
            LoveisMagical,
            EdelsEarrings,
+           SniperGoggles,
+           Paikea,
+           Khandroma,
+           CobraKnife,
+           CobraHat,
+/*VersionControldefinitionsList*/
+
 		};
     }
 }
