@@ -456,7 +456,7 @@ namespace BraveHaxvius.Data
                     var message = line.Split(new char[1] { '^' })[1].Replace("\\", "\\\\").Replace("\"", "\\\"");
                     if (names.Contains(name))
                     {
-                        name += message;
+                        name += message + "_";
                     }
                     names.Add(name);
                     definitionsList.AppendLine($"           {{\"{name}\", \"{message}\"}},");
