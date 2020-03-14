@@ -138,7 +138,7 @@ namespace BraveHaxvius
                 UpdateNews();
                 UpdateExpeditions();
             }
-            //UpdateMail();
+            UpdateMail();
             UpdateGachaList();
         }
         public void LoginUnlinkedAccount(String userId, String pw, String gumiId, String gumiToken)
@@ -639,15 +639,15 @@ namespace BraveHaxvius
         {
             Mail.Clear();
             var MailList = Network.SendPacket(Request.MailList);
-            if (MailList == null || MailList[GameObject.UserMailInfo] != null)
+            if (MailList == null || MailList[GameObject.UserMailInfo] == null)
                 return;
-            var mailList = Network.SendPacket(Request.MailList)[GameObject.UserMailInfo].Select(m => new Mail
+            var mailList = MailList[GameObject.UserMailInfo].Select(m => new Mail
             {
                 Id = m[Variable.MailId].ToString(),
                 Title = m[Variable.MailTitle].ToString().StartsWith("{") ?
-                     ((JObject)JsonConvert.DeserializeObject(m[Variable.MailTitle].ToString()))["en"].ToString() : Text.Texts[m[Variable.MailTitle].ToString()],
+                     ((JObject)JsonConvert.DeserializeObject(m[Variable.MailTitle].ToString()))["en"]?.ToString() ?? ((JObject)JsonConvert.DeserializeObject(m[Variable.MailTitle].ToString()))["message"]?.ToString() : Text.Texts[m[Variable.MailTitle].ToString()],
                 Message = m[Variable.MailTitle].ToString().StartsWith("{") ?
-                    ((JObject)JsonConvert.DeserializeObject(m[Variable.Message].ToString()))["en"].ToString() :
+                    ((JObject)JsonConvert.DeserializeObject(m[Variable.Message].ToString()))["en"]?.ToString() ?? ((JObject)JsonConvert.DeserializeObject(m[Variable.MailTitle].ToString()))["message"]?.ToString() :
                         Text.Texts.ContainsKey(m[Variable.Message].ToString()) ? Text.Texts[m[Variable.Message].ToString()] : m[Variable.Message].ToString(),
                 Type = m[Variable.MailType].ToString(),
                 Items = m[Variable.MailItems].ToString(),

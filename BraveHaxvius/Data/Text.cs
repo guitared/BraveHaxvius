@@ -2498,8 +2498,6 @@ namespace BraveHaxvius.Data
            {"Account_Title_Account", ""},
            {"Account_Description_Account", ""},
            {"Account_Button_Change_Binding", ""},
-           {"Popup_logout_completed", ""},
-           {"Popup_logout_confirm", ""},
            {"EQUIP_SORT_TYPE_RARE", "Rarity"},
            {"GACHA_UNIT_DETAIL_NOTICE", "Unit is at <param=rare>★, max level, with max level limit burst."},
            {"GACHA_REST_TIME", "Remaining"},

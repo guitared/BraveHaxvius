@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Windows.Forms;
-using BraveHaxvius;
+﻿using BraveHaxvius;
 using BraveHaxvius.Data;
 using Client.Properties;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.IO;
+using System.Linq;
+using System.Threading;
+using System.Windows.Forms;
 
 namespace Client
 {
@@ -37,10 +34,26 @@ namespace Client
         public void Hook(String s)
         {
             consoleLog.Focus();
-            consoleLog.AppendText(s+ "\r\n");
+            consoleLog.AppendText(s + "\r\n");
         }
         private void InitStaticItems()
         {
+
+            DataTable newsTable = new DataTable();
+            DataTable mailTable = new DataTable();
+
+            mailTable.Columns.Add("Title");
+            mailTable.Columns.Add("Discription");
+            for (var i = 0; i < 10; i++)
+                mailTable.Rows.Add(" ", " ");
+            mailDataGrid.DataSource = mailTable;
+            newsTable.Columns.Add("Text");
+            newsTable.Columns.Add("Link");
+            for(var i = 0; i < 10; i++) 
+            newsTable.Rows.Add(" ", " ");
+            NewdataGrid.DataSource = newsTable;
+            
+
             injectDataTable.Columns.Add("Count");
             injectDataTable.Columns.Add("Type");
             injectDataTable.Columns.Add("Name");
@@ -49,14 +62,14 @@ namespace Client
             Equipment.Equipments.FindAll(i => i.Description != null).ForEach(i => injectDataTable.Rows.Add(0, "equip", i.Name, i.EquipId));
             Materia.Materias.FindAll(i => i.Description != null).ForEach(i => injectDataTable.Rows.Add(0, "materia", i.Name, i.MateriaId));
             injectDataGrid.DataSource = injectDataTable;
-            
+
             Unit.Units.FindAll(u => u.Description != null && u.IsSummonable == "1" && u.UnitId == u.BaseUnitId);
             List<Mission> missionList = new List<Mission>();
-            Mission.Missions.FindAll(i => i.Description != null).ForEach(i => {i.Description = string.Format("{0} ({1})", i.Name, i.Energy); missionList.Add(i); });
+            Mission.Missions.FindAll(i => i.Description != null).ForEach(i => { i.Description = string.Format("{0} ({1})", i.Name, i.Energy); missionList.Add(i); });
 
             unitSelect.DataSource = Unit.Units.FindAll(u => u.Description != null && u.IsSummonable == "1" && u.UnitId == u.BaseUnitId);
             unitSelect.DisplayMember = "Name";
-            
+
             missionSelect.DataSource = missionList;
             missionSelect.DisplayMember = "Description";
         }
@@ -183,7 +196,7 @@ namespace Client
             var t = new Thread(() =>
             {
                 GachaSummon.Enabled = false;
-                
+
                 var GachaId = JPGacha.Text.Split(':').Select(p => p.Trim()).ToList().First();
                 var Gacha = Gachas.First(g => g[Variable.GachaId].ToString() == GachaId);
                 var GachaTicket = Ticket.Tickets.First(x => x.Name == JPGachaTicket.Text).Id;
@@ -358,6 +371,109 @@ namespace Client
             });
             t.IsBackground = true;
             t.Start();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            var t = new Thread(() =>
+            {
+                client.Login();
+                client.UpdateNews();
+                DataTable newsTable = new DataTable();
+                DataTable mailTable = new DataTable();
+
+                
+                //var mails =  JsonConvert.DeserializeObject<List<Mail>>(File.ReadAllText(@"c:\temp\1.txt"));
+                
+               
+                mailTable.Columns.Add("Title");
+                mailTable.Columns.Add("Discription");
+                client.Mail.ForEach(m =>
+                //mails.ForEach(m =>
+                {
+                    if (m.Title.StartsWith("Expe")){
+                        Console.WriteLine("DD");
+                    }
+                       
+                var unitList = m.Items.ToString().Split(new char[1] { ',' });
+                var itemsAndTickets = new List<String>();
+
+                    foreach (var unitToken in unitList)
+                    {
+                        var parts = unitToken.Split(new char[1] { ':' });
+                        Boolean addx = (UInt16.Parse(parts[2]) > 1);
+                        switch (parts[0])
+                        {
+                            case "10":
+                                var selectedTurstMoggle = Unit.Units.FirstOrDefault(u => u.UnitId.ToString() == parts[1]).Name;
+                                if (selectedTurstMoggle.Contains("Moogle"))
+                                {
+                                    addx = false;
+                                    if (parts[6].Contains("100000001"))
+                                        selectedTurstMoggle += " 5%";
+                                    if (parts[6].Contains("100000008"))
+                                        selectedTurstMoggle += " 50%";
+                                    if (parts[6].Contains("100000005"))
+                                        selectedTurstMoggle += " 1%";
+                                    //if (selectedTurstMoggle.StartsWith("20"))
+                                    //    selectedTurstMoggleContain = Item.Items.First(i => i.ItemId == parts[6]).Name;
+                                    //if (selectedTurstMoggle.StartsWith("21"))
+                                    //    selectedTurstMoggleContain = Equipment.Equipments.First(i => i.EquipId == parts[6]).Name;
+                                }
+                                itemsAndTickets.Add(string.Join(" ", selectedTurstMoggle + (addx ? " X " + parts[2] : "")));
+                                break;
+                            case "20":
+                                itemsAndTickets.Add(Item.Items.First(i => i.ItemId == parts[1]).Name + (addx ? " X " + parts[2] : ""));
+                                break;
+                            case "22":
+                                itemsAndTickets.Add(Materia.Materias.First(ma => ma.MateriaId == parts[1]).Name);
+                                break;
+                            case "23":
+                                itemsAndTickets.Add(ImportantItem.ImportantItems.First(i => i.ImportantId == parts[1]).Name + (addx ? " X " + parts[2] : ""));
+                                break;
+                            case "50":
+                                itemsAndTickets.Add(string.Join(":", parts));
+                                break;
+                            case "60"://Receipt       
+                                break;
+                            default:
+                                itemsAndTickets.Add("Default case");
+                                break;
+                        }
+                    }
+                    mailTable.Rows.Add(m.Title, string.Join(" ", itemsAndTickets.ToList()) );
+                });
+                mailDataGrid.DataSource = mailTable;
+
+                newsTable.Columns.Add("Text");
+                newsTable.Columns.Add("Link");
+                client.News.ForEach(n =>
+                {
+                    newsTable.Rows.Add(n.Translation, n.Link);
+                });
+                NewdataGrid.DataSource = newsTable;
+
+
+            });
+            t.IsBackground = true;
+            t.Start();
+            
+
+
+
+
+
+
+        }
+
+        private void NewdataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var dd= NewdataGrid.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+            
+
+            System.Diagnostics.Process.Start(dd.ToString());
+
         }
     }
 }

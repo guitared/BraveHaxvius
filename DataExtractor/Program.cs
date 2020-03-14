@@ -387,7 +387,7 @@ namespace BraveHaxvius.Data
             DumpHardcoded("Request", networkJson, new List<String> { "Url", "EncodeKey", "RequestID" });
             DumpHardcoded("GameObject", responseJson);
             DumpHardcoded("Variable", variableJson);
-
+            
             var bot = new BraveExvius
             {
                 MstVersion = "0"
@@ -401,7 +401,6 @@ namespace BraveHaxvius.Data
                 new JProperty(Variable.KeyName, ((JObject)JsonConvert.DeserializeObject(l))[Variable.KeyName].ToString()),
                 new JProperty(Variable.Value, ((JObject)JsonConvert.DeserializeObject(l))["00zAYGYS"].ToString())));
             });
-
 
             {
                 var switchJson = DecodeFile(newMsts.First(m => m[Variable.KeyName].ToString() == "F_SUBLIMATION_RECIPE_MST"));
