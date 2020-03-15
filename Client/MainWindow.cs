@@ -402,7 +402,7 @@ namespace Client
                     foreach (var unitToken in unitList)
                     {
                         var parts = unitToken.Split(new char[1] { ':' });
-                        Boolean addx = (UInt16.Parse(parts[2]) > 1);
+                        Boolean addx = (UInt16.Parse((parts.Count() > 2) ? parts[2] : "0" ) > 1);
                         switch (parts[0])
                         {
                             case "10":
@@ -431,6 +431,9 @@ namespace Client
                                 break;
                             case "23":
                                 itemsAndTickets.Add(ImportantItem.ImportantItems.First(i => i.ImportantId == parts[1]).Name + (addx ? " X " + parts[2] : ""));
+                                break;
+                            case "30":
+                                itemsAndTickets.Add(string.Join(" ", parts[1] + " Gils") );
                                 break;
                             case "50":
                                 itemsAndTickets.Add(string.Join(":", parts));
