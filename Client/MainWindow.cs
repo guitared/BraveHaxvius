@@ -199,7 +199,7 @@ namespace Client
 
                 var GachaId = JPGacha.Text.Split(':').Select(p => p.Trim()).ToList().First();
                 var Gacha = Gachas.First(g => g[Variable.GachaId].ToString() == GachaId);
-                var GachaTicket = Ticket.Tickets.First(x => x.Name == JPGachaTicket.Text).Id;
+                var GachaTicket = Ticket.Tickets.First(x => x.Name == JPGachaTicket.Text).ImportantId;
                 var GachaSubId = Gacha[Variable.Options].ToString().Split(',').Last();
                 client.Summon(Gacha[Variable.GachaId].ToString(), GachaSubId, "1", GachaTicket);
 
