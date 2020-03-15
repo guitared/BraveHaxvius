@@ -35,6 +35,7 @@ namespace Client
         {
             consoleLog.Focus();
             consoleLog.AppendText(s + "\r\n");
+            consoleLog.ScrollToCaret();
         }
         private void InitStaticItems()
         {
