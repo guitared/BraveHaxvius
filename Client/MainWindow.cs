@@ -436,7 +436,7 @@ namespace Client
                                 itemsAndTickets.Add(string.Join(" ", parts[1] + " Gils") );
                                 break;
                             case "50":
-                                itemsAndTickets.Add(string.Join(":", parts));
+                                itemsAndTickets.Add(string.Join(" ", parts[2] + " lapiz?"));
                                 break;
                             case "60"://Receipt       
                                 break;

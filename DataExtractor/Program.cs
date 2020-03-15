@@ -401,7 +401,6 @@ namespace BraveHaxvius.Data
                 new JProperty(Variable.KeyName, ((JObject)JsonConvert.DeserializeObject(l))[Variable.KeyName].ToString()),
                 new JProperty(Variable.Value, ((JObject)JsonConvert.DeserializeObject(l))["00zAYGYS"].ToString())));
             });
-
             {
                 var switchJson = DecodeFile(newMsts.First(m => m[Variable.KeyName].ToString() == "F_SUBLIMATION_RECIPE_MST"));
                 var switchMst = switchJson.Select(m => (JObject)JsonConvert.DeserializeObject(m)).ToList();
@@ -439,6 +438,7 @@ namespace BraveHaxvius.Data
                 { "Equip", "" } });
             DumpTranslation(newMsts, "F_TEXT_MISSION", "F_MISSION_MST", "Mission");
             DumpTranslation(newMsts, "F_TEXT_IMPORTANT_ITEM_NAME", "F_IMPORTANT_ITEM_MST", "ImportantItem");
+            DumpTranslation(newMsts, "F_TEXT_IMPORTANT_ITEM_NAME", "F_TICKET_MST", "Ticket");
             DumpTranslation(newMsts, "F_TEXT_ITEM_NAME", "F_ITEM_MST", "Item");
             DumpTranslation(newMsts, "F_TEXT_RECIPE_BOOK_NAME", "F_RECIPE_BOOK_MST", "Recipe");
             DumpTranslation(newMsts, "F_TEXT_MATERIA_NAME", "F_MATERIA_MST", "Materia");
