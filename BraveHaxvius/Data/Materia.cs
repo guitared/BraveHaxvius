@@ -1,4 +1,4 @@
-//MST_MATERIA_NAME_504232708^Knowledge of Aeons^Knowledge of Aeons---VersionControl
+//MST_MATERIA_NAME_504230775^Surpassing the Legend^Surpassing the Legend---VersionControl
 using System;
 using System.Collections.Generic;
 
@@ -818,7 +818,14 @@ namespace BraveHaxvius.Data
         public static readonly Materia AceofAces = new Materia { Name = "Ace of Aces", MateriaId = "504232700", Description = "正真正銘のエース", CountId = "2139101", EquipmentActiveAbility = "", EquipmentPassiveAbility = "232700", ItemStack = "99", ItemBuyPrice = "100000", ItemSellPrice = "10000", ItemIdClone = "700000076", BitNumber = "1020"};
         public static readonly Materia OriginatoroftheFinalSummoning = new Materia { Name = "Originator of the Final Summoning", MateriaId = "504232703", Description = "究極召喚の伝承者", CountId = "2137151", EquipmentActiveAbility = "", EquipmentPassiveAbility = "232703", ItemStack = "99", ItemBuyPrice = "200000", ItemSellPrice = "20000", ItemIdClone = "700000077", BitNumber = "1021"};
         public static readonly Materia KnowledgeofAeons = new Materia { Name = "Knowledge of Aeons", MateriaId = "504232708", Description = "召喚の心得", CountId = "2137153", EquipmentActiveAbility = "", EquipmentPassiveAbility = "232708", ItemStack = "99", ItemBuyPrice = "50000", ItemSellPrice = "5000", ItemIdClone = "700000077", BitNumber = "1024"};
+        public static readonly Materia HighClassDagger = new Materia { Name = "High Class Dagger", MateriaId = "504232863", Description = "ハイクラスダガー", CountId = "2113212", EquipmentActiveAbility = "", EquipmentPassiveAbility = "232863", ItemStack = "99", ItemBuyPrice = "200000", ItemSellPrice = "20000", ItemIdClone = "700000095", BitNumber = "1029"};
+        public static readonly Materia RookieSphereHunter = new Materia { Name = "Rookie Sphere Hunter", MateriaId = "504232860", Description = "新人スフィアハンター", CountId = "2153711", EquipmentActiveAbility = "", EquipmentPassiveAbility = "232860", ItemStack = "99", ItemBuyPrice = "100000", ItemSellPrice = "10000", ItemIdClone = "700000018", BitNumber = "1028"};
+        public static readonly Materia TheLivingofSpira_504232790 = new Materia { Name = "The Living of Spira", MateriaId = "504232790", Description = "スピラで生きる者", CountId = "2111311", EquipmentActiveAbility = "", EquipmentPassiveAbility = "232790", ItemStack = "99", ItemBuyPrice = "50000", ItemSellPrice = "5000", ItemIdClone = "700000077", BitNumber = "1025"};
+        public static readonly Materia TheLivingofSpira_504232791 = new Materia { Name = "The Living of Spira+", MateriaId = "504232791", Description = "スピラで生きる者 改", CountId = "2111510", EquipmentActiveAbility = "", EquipmentPassiveAbility = "232791", ItemStack = "99", ItemBuyPrice = "100000", ItemSellPrice = "10000", ItemIdClone = "700000077", BitNumber = "1026"};
+        public static readonly Materia TidalWaves = new Materia { Name = "Tidal Waves", MateriaId = "504230774", Description = "タイダルウエイブ", CountId = "2212561", EquipmentActiveAbility = "", EquipmentPassiveAbility = "230774", ItemStack = "99", ItemBuyPrice = "100000", ItemSellPrice = "10000", ItemIdClone = "700000035", BitNumber = "959"};
+        public static readonly Materia SurpassingtheLegend = new Materia { Name = "Surpassing the Legend", MateriaId = "504230775", Description = "伝説を超えし者", CountId = "2153731", EquipmentActiveAbility = "", EquipmentPassiveAbility = "230775", ItemStack = "99", ItemBuyPrice = "100000", ItemSellPrice = "10000", ItemIdClone = "700000099", BitNumber = "960"};
 /*VersionControldefinitions*/
+
 
 
 
@@ -1626,7 +1633,14 @@ namespace BraveHaxvius.Data
            AceofAces,
            OriginatoroftheFinalSummoning,
            KnowledgeofAeons,
+           HighClassDagger,
+           RookieSphereHunter,
+           TheLivingofSpira_504232790,
+           TheLivingofSpira_504232791,
+           TidalWaves,
+           SurpassingtheLegend,
 /*VersionControldefinitionsList*/
+
 
 
 
