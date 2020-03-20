@@ -1411,6 +1411,7 @@ namespace BraveHaxvius.Data
 
 
 
+
 		public static readonly List<Item> Items = new List<Item>
 		{
            Potion,
@@ -2801,6 +2802,7 @@ namespace BraveHaxvius.Data
            BlackCube,
            Omniprism,
 /*VersionControldefinitionsList*/
+
 
 
 		};

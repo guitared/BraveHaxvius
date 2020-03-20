@@ -18,6 +18,10 @@ namespace Client
         BraveExvius client = new BraveExvius();
         DataTable injectDataTable = new DataTable();
         JToken Gachas;
+        DataTable IWTable = new DataTable();
+        DataTable newsTable = new DataTable();
+        DataTable mailTable = new DataTable();
+
 
         public MainWindow()
         {
@@ -39,9 +43,18 @@ namespace Client
         }
         private void InitStaticItems()
         {
+            
+            IWTable.Columns.Add("Name");
+            IWTable.Columns.Add("EquipID");
+            IWTable.Columns.Add("Unique EquipID");
+            IWTable.Columns.Add("Current Abilities 1");
+            IWTable.Columns.Add("Current Abilities 2");
+            for (var i = 0; i < 10; i++)
+                IWTable.Rows.Add(" ", " ", " ", " ", " ");
 
-            DataTable newsTable = new DataTable();
-            DataTable mailTable = new DataTable();
+            IWGrid.DataSource = IWTable;
+            
+            IWGrid.EditMode = DataGridViewEditMode.EditOnF2;
 
             mailTable.Columns.Add("Title");
             mailTable.Columns.Add("Discription");
@@ -94,6 +107,7 @@ namespace Client
         }
         private void InjectButton_Click(object sender, EventArgs e)
         {
+            //Injection is not working.
             var t = new Thread(() =>
             {
                 injectButton.Enabled = false;
@@ -379,17 +393,11 @@ namespace Client
             
             var t = new Thread(() =>
             {
-                client.Login();
-                client.UpdateNews();
-                DataTable newsTable = new DataTable();
-                DataTable mailTable = new DataTable();
-
                 
-                //var mails =  JsonConvert.DeserializeObject<List<Mail>>(File.ReadAllText(@"c:\temp\1.txt"));
-                
-               
-                mailTable.Columns.Add("Title");
-                mailTable.Columns.Add("Discription");
+                if (client.GetUserInfo2 == null)
+                    client.Login();
+                //client.UpdateNews();
+                mailTable.Clear();
                 client.Mail.ForEach(m =>
                 //mails.ForEach(m =>
                 {
@@ -448,26 +456,18 @@ namespace Client
                     }
                     mailTable.Rows.Add(m.Title, string.Join(" ", itemsAndTickets.ToList()) );
                 });
-                mailDataGrid.DataSource = mailTable;
 
-                newsTable.Columns.Add("Text");
-                newsTable.Columns.Add("Link");
+                newsTable.Clear();
                 client.News.ForEach(n =>
                 {
                     newsTable.Rows.Add(n.Translation, n.Link);
                 });
-                NewdataGrid.DataSource = newsTable;
+                
 
 
             });
             t.IsBackground = true;
             t.Start();
-            
-
-
-
-
-
 
         }
 
@@ -479,5 +479,26 @@ namespace Client
             System.Diagnostics.Process.Start(dd.ToString());
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var t = new Thread(() =>
+            {
+
+                
+                if (client.GetUserInfo2 == null)
+                    client.Login();
+                IWTable.Clear();
+                client.GetUserInfo2[GameObject.UserCustomEquipItemInfo].ToList().FindAll(f =>
+                       f[Variable.IWEquipId] != null).ForEach(f =>
+                        IWTable.Rows.Add(Equipment.Equipments.First(i => i.EquipId == f[Variable.EquipId].ToString()).Name, " " + f[Variable.EquipId].ToString(), " " + f[Variable.IWEquipId].ToString(), string.Join(", ", f["nM63Zvtp"].ToString().Split(new char[1] { ',' }).ToList().FindAll(w => w.Contains("24:")).ToList().Select(w => Ability.Abilitys.First(a => a.AbilityId == w?.Split(new char[1] { ':' })[1].ToString()).Name).ToList().Select(d => String.Format("{0}", d.Trim()))), string.Join(", ", f["2p9qywBL"].ToString().Split(new char[1] { ',' }).ToList().FindAll(w => w.Contains("24:")).ToList().Select(w => Ability.Abilitys.First(a => a.AbilityId == w?.Split(new char[1] { ':' })[1].ToString()).Name).ToList().Select(d => String.Format("{0}", d.Trim())))));
+                IWGrid.Refresh();
+
+            });
+            t.IsBackground = true;
+            t.Start();
+
+        }
+
     }
 }
