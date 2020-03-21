@@ -500,5 +500,10 @@ namespace Client
 
         }
 
+        private void clearLogButton_Click(object sender, EventArgs e)
+        {
+            consoleLog.Clear();
+            consoleLog.Focus();
+        }
     }
 }

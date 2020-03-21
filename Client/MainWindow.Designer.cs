@@ -91,6 +91,7 @@
             this.gitHubLink = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clearLogButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.injectionTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.injectDataGrid)).BeginInit();
@@ -775,11 +776,22 @@
             this.Column2.HeaderText = "Column2";
             this.Column2.Name = "Column2";
             // 
+            // clearLogButton
+            // 
+            this.clearLogButton.Location = new System.Drawing.Point(735, 312);
+            this.clearLogButton.Name = "clearLogButton";
+            this.clearLogButton.Size = new System.Drawing.Size(60, 23);
+            this.clearLogButton.TabIndex = 12;
+            this.clearLogButton.Text = "Clear Log";
+            this.clearLogButton.UseVisualStyleBackColor = true;
+            this.clearLogButton.Click += new System.EventHandler(this.clearLogButton_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(814, 565);
+            this.Controls.Add(this.clearLogButton);
             this.Controls.Add(this.gitHubLink);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -886,6 +898,7 @@
         private System.Windows.Forms.TabPage weaponTab;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView IWGrid;
+        private System.Windows.Forms.Button clearLogButton;
     }
 }
 
