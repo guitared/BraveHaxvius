@@ -1,4 +1,4 @@
-//MST_RECIPEBOOK_NAME_904003450^Cobra Hat^Cobra Hat---VersionControl
+//MST_RECIPEBOOK_NAME_904003300^The Living of Spira+^The Living of Spira+---VersionControl
 using System;
 using System.Collections.Generic;
 
@@ -682,7 +682,13 @@ namespace BraveHaxvius.Data
         public static readonly Recipe Khandroma = new Recipe { Name = "Khandroma"};
         public static readonly Recipe CobraKnife = new Recipe { Name = "Cobra Knife"};
         public static readonly Recipe CobraHat = new Recipe { Name = "Cobra Hat"};
+        public static readonly Recipe GunnerYunasDress = new Recipe { Name = "Gunner Yuna's Dress+"};
+        public static readonly Recipe ThiefRikkusBandana = new Recipe { Name = "Thief Rikku's Bandana+"};
+        public static readonly Recipe WarriorPainesGuise = new Recipe { Name = "Warrior Paine's Guise+"};
+        public static readonly Recipe TheLivingofSpira_904003290 = new Recipe { Name = "The Living of Spira"};
+        public static readonly Recipe TheLivingofSpira_904003300 = new Recipe { Name = "The Living of Spira+"};
 /*VersionControldefinitions*/
+
 
 
 		public static readonly List<Recipe> Recipes = new List<Recipe>
@@ -1357,7 +1363,13 @@ namespace BraveHaxvius.Data
            Khandroma,
            CobraKnife,
            CobraHat,
+           GunnerYunasDress,
+           ThiefRikkusBandana,
+           WarriorPainesGuise,
+           TheLivingofSpira_904003290,
+           TheLivingofSpira_904003300,
 /*VersionControldefinitionsList*/
+
 
 		};
     }

@@ -1,4 +1,4 @@
-//MST_ITEM_NAME_1209001192^Summon Coin (T/Y/L/A/J)^Summon Coin (T/Y/L/A/J)---VersionControl
+//MST_ITEM_NAME_900000001^Omniprism^Omniprism---VersionControl
 using System;
 using System.Collections.Generic;
 
@@ -18,6 +18,7 @@ namespace BraveHaxvius.Data
         public String ItemSellPrice { get; set; }
         public String ItemIdClone { get; set; }
         public String BitNumber { get; set; }
+        public String Ha9G5sCS { get; set; }
 
         public static readonly Item Potion = new Item { Name = "Potion", ItemId = "101000100", Description = "ポーション", EquipmentRarity = "1", CountId = "1", IsPotUnit = "1", KeyName = "6", ItemStack = "99", ItemBuyPrice = "100", ItemSellPrice = "10", ItemIdClone = "101000100", BitNumber = "1"};
         public static readonly Item HiPotion = new Item { Name = "Hi-Potion", ItemId = "101000200", Description = "ハイポーション", EquipmentRarity = "3", CountId = "2", IsPotUnit = "1", KeyName = "6", ItemStack = "99", ItemBuyPrice = "500", ItemSellPrice = "50", ItemIdClone = "101000200", BitNumber = "2"};
@@ -1393,7 +1394,22 @@ namespace BraveHaxvius.Data
         public static readonly Item BlueAuxiliaryQuestKey = new Item { Name = "Blue Auxiliary Quest Key", ItemId = "1209001182", Description = "Blue Auxiliary Quest Key", EquipmentRarity = "8", CountId = "9475", IsPotUnit = "0", KeyName = "0", ItemStack = "99", ItemBuyPrice = "0", ItemSellPrice = "0", ItemIdClone = "1209001182", BitNumber = "9475"};
         public static readonly Item GuaranteedSpecialSummonTicket_106211750 = new Item { Name = "Guaranteed 5★ Special Summon Ticket", ItemId = "106211750", Description = "[期間限定]★5確定SP召喚チケット2019/8", EquipmentRarity = "8", CountId = "1140", IsPotUnit = "5", KeyName = "0", ItemStack = "99999", ItemBuyPrice = "100000", ItemSellPrice = "10000", ItemIdClone = "106211170", BitNumber = "1057"};
         public static readonly Item SummonCoinTYLAJ = new Item { Name = "Summon Coin (T/Y/L/A/J)", ItemId = "1209001192", Description = "Summon Coin (T/Y/L/A/J)", EquipmentRarity = "8", CountId = "9481", IsPotUnit = "0", KeyName = "0", ItemStack = "9999", ItemBuyPrice = "10", ItemSellPrice = "10", ItemIdClone = "1209001192", BitNumber = "9481"};
+        public static readonly Item ExchangeTicketFFXYRP = new Item { Name = "5★ Exchange Ticket [FFX-2: Y/R/P]", ItemId = "1209001170", Description = "5★ Exchange Ticket [Y/R/P]", EquipmentRarity = "8", CountId = "9463", IsPotUnit = "0", KeyName = "0", Ha9G5sCS = "", ItemStack = "9999", ItemBuyPrice = "10", ItemSellPrice = "10", ItemIdClone = "1209001170", BitNumber = "9463"};
+        public static readonly Item GuaranteedFeaturedTicketFFXYRP = new Item { Name = "5★ Guaranteed (30% Featured) Ticket [FFX-2: Y/R/P]", ItemId = "1209001171", Description = "5★ Guaranteed (30% Featured) Ticket [Y/R/P]", EquipmentRarity = "8", CountId = "9464", IsPotUnit = "0", KeyName = "0", Ha9G5sCS = "", ItemStack = "9999", ItemBuyPrice = "10", ItemSellPrice = "10", ItemIdClone = "1209001171", BitNumber = "9464"};
+        public static readonly Item SummonCoinFFXYRP = new Item { Name = "Summon Coin (FFX-2: Y/R/P)", ItemId = "1209001172", Description = "Summon Coin (Y/R/P)", EquipmentRarity = "8", CountId = "9465", IsPotUnit = "0", KeyName = "0", Ha9G5sCS = "", ItemStack = "9999", ItemBuyPrice = "10", ItemSellPrice = "10", ItemIdClone = "1209001172", BitNumber = "9465"};
+        public static readonly Item DailyCoin = new Item { Name = "Daily Coin", ItemId = "1209001163", Description = "Daily Coin", EquipmentRarity = "8", CountId = "9456", IsPotUnit = "0", KeyName = "0", Ha9G5sCS = "", ItemStack = "9999", ItemBuyPrice = "10", ItemSellPrice = "10", ItemIdClone = "1209001163", BitNumber = "9456"};
+        public static readonly Item Amber = new Item { Name = "Amber", ItemId = "235017200", Description = "琥珀", EquipmentRarity = "3", CountId = "1161", IsPotUnit = "0", KeyName = "0", Ha9G5sCS = "", ItemStack = "199", ItemBuyPrice = "500", ItemSellPrice = "50", ItemIdClone = "235017200", BitNumber = "1078"};
+        public static readonly Item RikkuFFXsPrism = new Item { Name = "Rikku (FFX-2)'s Prism", ItemId = "300002010", Description = "リュック(FFX-2)の輝源", EquipmentRarity = "8", CountId = "1158", IsPotUnit = "0", KeyName = "0", Ha9G5sCS = "", ItemStack = "199", ItemBuyPrice = "0", ItemSellPrice = "0", ItemIdClone = "600000090", BitNumber = "1075"};
+        public static readonly Item YunaFFXsPrism = new Item { Name = "Yuna (FFX-2)'s Prism", ItemId = "300002000", Description = "ユウナ(FFX-2)の輝源", EquipmentRarity = "8", CountId = "1157", IsPotUnit = "0", KeyName = "0", Ha9G5sCS = "", ItemStack = "199", ItemBuyPrice = "0", ItemSellPrice = "0", ItemIdClone = "600000090", BitNumber = "1074"};
+        public static readonly Item PainesPrism = new Item { Name = "Paine's Prism", ItemId = "300002020", Description = "パインの輝源", EquipmentRarity = "8", CountId = "1159", IsPotUnit = "0", KeyName = "0", Ha9G5sCS = "", ItemStack = "199", ItemBuyPrice = "0", ItemSellPrice = "0", ItemIdClone = "600000090", BitNumber = "1076"};
+        public static readonly Item Lazulite = new Item { Name = "Lazulite", ItemId = "235017000", Description = "天藍石", EquipmentRarity = "4", CountId = "1138", IsPotUnit = "0", KeyName = "0", Ha9G5sCS = "", ItemStack = "199", ItemBuyPrice = "1000", ItemSellPrice = "100", ItemIdClone = "235017000", BitNumber = "1055"};
+        public static readonly Item Calcite = new Item { Name = "Calcite", ItemId = "235017100", Description = "天輝石", EquipmentRarity = "5", CountId = "1152", IsPotUnit = "0", KeyName = "0", Ha9G5sCS = "", ItemStack = "199", ItemBuyPrice = "2000", ItemSellPrice = "200", ItemIdClone = "235017100", BitNumber = "1069"};
+        public static readonly Item WhiteCube = new Item { Name = "White Cube", ItemId = "235016800", Description = "ホワイトキューブ", EquipmentRarity = "5", CountId = "1136", IsPotUnit = "0", KeyName = "0", Ha9G5sCS = "", ItemStack = "199", ItemBuyPrice = "2000", ItemSellPrice = "200", ItemIdClone = "235016800", BitNumber = "1053"};
+        public static readonly Item BlackCube = new Item { Name = "Black Cube", ItemId = "235016900", Description = "ブラックキューブ", EquipmentRarity = "5", CountId = "1137", IsPotUnit = "0", KeyName = "0", Ha9G5sCS = "", ItemStack = "199", ItemBuyPrice = "1000", ItemSellPrice = "100", ItemIdClone = "235016900", BitNumber = "1054"};
+        public static readonly Item Omniprism = new Item { Name = "Omniprism", ItemId = "900000001", Description = "ALL輝源", EquipmentRarity = "8", CountId = "1225", IsPotUnit = "0", KeyName = "0", Ha9G5sCS = "", ItemStack = "199", ItemBuyPrice = "0", ItemSellPrice = "0", ItemIdClone = "900000001", BitNumber = "1143"};
 /*VersionControldefinitions*/
+
+
 
 
 		public static readonly List<Item> Items = new List<Item>
@@ -2772,7 +2788,22 @@ namespace BraveHaxvius.Data
            BlueAuxiliaryQuestKey,
            GuaranteedSpecialSummonTicket_106211750,
            SummonCoinTYLAJ,
+           ExchangeTicketFFXYRP,
+           GuaranteedFeaturedTicketFFXYRP,
+           SummonCoinFFXYRP,
+           DailyCoin,
+           Amber,
+           RikkuFFXsPrism,
+           YunaFFXsPrism,
+           PainesPrism,
+           Lazulite,
+           Calcite,
+           WhiteCube,
+           BlackCube,
+           Omniprism,
 /*VersionControldefinitionsList*/
+
+
 
 		};
     }

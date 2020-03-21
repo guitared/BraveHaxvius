@@ -75,6 +75,9 @@
             this.mailDataGrid = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.NewdataGrid = new System.Windows.Forms.DataGridView();
+            this.weaponTab = new System.Windows.Forms.TabPage();
+            this.IWGrid = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
             this.donateButton = new System.Windows.Forms.Button();
             this.consoleLog = new System.Windows.Forms.RichTextBox();
             this.ProxyPort = new System.Windows.Forms.TextBox();
@@ -99,6 +102,8 @@
             this.newMailTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.mailDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NewdataGrid)).BeginInit();
+            this.weaponTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.IWGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -110,6 +115,7 @@
             this.tabControl1.Controls.Add(this.sellTab);
             this.tabControl1.Controls.Add(this.jpSummonTab);
             this.tabControl1.Controls.Add(this.newMailTab);
+            this.tabControl1.Controls.Add(this.weaponTab);
             this.tabControl1.Location = new System.Drawing.Point(13, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -153,6 +159,7 @@
             // 
             // injectButton
             // 
+            this.injectButton.Enabled = false;
             this.injectButton.Location = new System.Drawing.Point(698, 176);
             this.injectButton.Name = "injectButton";
             this.injectButton.Size = new System.Drawing.Size(77, 23);
@@ -598,7 +605,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Login";
+            this.button1.Text = "Load Data";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -617,6 +624,41 @@
             this.NewdataGrid.Size = new System.Drawing.Size(354, 196);
             this.NewdataGrid.TabIndex = 0;
             this.NewdataGrid.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NewdataGrid_CellContentClick);
+            // 
+            // weaponTab
+            // 
+            this.weaponTab.Controls.Add(this.IWGrid);
+            this.weaponTab.Controls.Add(this.button2);
+            this.weaponTab.Location = new System.Drawing.Point(4, 22);
+            this.weaponTab.Name = "weaponTab";
+            this.weaponTab.Padding = new System.Windows.Forms.Padding(3);
+            this.weaponTab.Size = new System.Drawing.Size(781, 205);
+            this.weaponTab.TabIndex = 7;
+            this.weaponTab.Text = "Weapon";
+            this.weaponTab.UseVisualStyleBackColor = true;
+            // 
+            // IWGrid
+            // 
+            this.IWGrid.AllowUserToAddRows = false;
+            this.IWGrid.AllowUserToDeleteRows = false;
+            this.IWGrid.AllowUserToResizeRows = false;
+            this.IWGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.IWGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.IWGrid.Location = new System.Drawing.Point(7, 4);
+            this.IWGrid.Name = "IWGrid";
+            this.IWGrid.RowHeadersVisible = false;
+            this.IWGrid.Size = new System.Drawing.Size(645, 195);
+            this.IWGrid.TabIndex = 1;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(700, 176);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 0;
+            this.button2.Text = "Load Data";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // donateButton
             // 
@@ -767,6 +809,8 @@
             this.newMailTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.mailDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NewdataGrid)).EndInit();
+            this.weaponTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.IWGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -839,6 +883,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridView mailDataGrid;
+        private System.Windows.Forms.TabPage weaponTab;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView IWGrid;
     }
 }
 

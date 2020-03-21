@@ -12,8 +12,6 @@ namespace Testing
     {
         static void Main(string[] args)
         {
-
-            
             var b = new BraveExvius
             {
                 MstVersion="0",
