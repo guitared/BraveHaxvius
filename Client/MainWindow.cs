@@ -505,5 +505,19 @@ namespace Client
             consoleLog.Clear();
             consoleLog.Focus();
         }
+
+        private void getUserStatButton_Click(object sender, EventArgs e)
+        {
+            var t = new Thread(() =>
+            {
+                getUserStatButton.Enabled = false;
+                if(client.GetUserInfo == null && client.GetUserInfo2 == null)
+                    client.Login();
+                client.GetUserStat();
+                getUserStatButton.Enabled = true;
+            });
+            t.IsBackground = true;
+            t.Start();   
+        }
     }
 }

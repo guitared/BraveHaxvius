@@ -92,6 +92,7 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clearLogButton = new System.Windows.Forms.Button();
+            this.getUserStatButton = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.injectionTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.injectDataGrid)).BeginInit();
@@ -786,11 +787,22 @@
             this.clearLogButton.UseVisualStyleBackColor = true;
             this.clearLogButton.Click += new System.EventHandler(this.clearLogButton_Click);
             // 
+            // getUserStatButton
+            // 
+            this.getUserStatButton.Location = new System.Drawing.Point(644, 312);
+            this.getUserStatButton.Name = "getUserStatButton";
+            this.getUserStatButton.Size = new System.Drawing.Size(85, 23);
+            this.getUserStatButton.TabIndex = 13;
+            this.getUserStatButton.Text = "Get User Stat";
+            this.getUserStatButton.UseVisualStyleBackColor = true;
+            this.getUserStatButton.Click += new System.EventHandler(this.getUserStatButton_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(814, 565);
+            this.Controls.Add(this.getUserStatButton);
             this.Controls.Add(this.clearLogButton);
             this.Controls.Add(this.gitHubLink);
             this.Controls.Add(this.label4);
@@ -899,6 +911,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridView IWGrid;
         private System.Windows.Forms.Button clearLogButton;
+        private System.Windows.Forms.Button getUserStatButton;
     }
 }
 

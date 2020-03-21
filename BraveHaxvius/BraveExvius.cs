@@ -635,6 +635,29 @@ namespace BraveHaxvius
             }).ToList();
             Expeditions.AddRange(expeditions);
         }
+
+        public void GetUserStat()
+        {
+            // Use maillist because of its small size rx/tx which include UserTeamInfo
+            var MailList = Network.SendPacket(Request.MailList);
+            if (MailList != null && MailList[GameObject.UserTeamInfo] != null)
+            {
+                var stat = MailList[GameObject.UserTeamInfo][0];
+                string level = String.Format("\nLevel\t{0} [exp {1}]",stat[Variable.Level],stat[Variable.Experience]);
+                string gil = String.Format("Gil\t{0}", stat[Variable.Gil]);
+                string energy = String.Format("Energy\t{0}/{1}", stat[Variable.Energy], stat[Variable.EnergyMax]);
+                string areana = String.Format("Areana\t{0}/{1}", stat[Variable.ColosseumOrb], stat[Variable.ColosseumOrbMax]);
+                string raid = String.Format("Raid\t{0}/{1}", stat[Variable.RaidOrb], stat[Variable.RaidOrbMax]);
+                string iw = String.Format("IWOrb\t{0}/{1}\n", stat[Variable.IWOrb], stat[Variable.IWOrbMax]);
+                Logger.Out(level);
+                Logger.Out(gil);
+                Logger.Out(energy);
+                Logger.Out(areana);
+                Logger.Out(raid);
+                Logger.Out(iw);
+            }
+        }
+
         public void UpdateMail()
         {
             Mail.Clear();
